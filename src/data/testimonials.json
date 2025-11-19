@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Michael Thompson",
+    "role": "Full Stack Developer",
+    "company": "Tech Corp",
+    "avatar": "MT",
+    "rating": 5,
+    "text": "This platform completely changed my career. The courses are comprehensive, well-structured, and the instructors are top-notch. I landed my dream job within 3 months of completing the bootcamp!"
+  },
+  {
+    "id": 2,
+    "name": "Emily Rodriguez",
+    "role": "Data Analyst",
+    "company": "Analytics Inc",
+    "avatar": "ER",
+    "rating": 5,
+    "text": "The data science course exceeded all my expectations. The hands-on projects and real-world datasets helped me build a strong portfolio. Highly recommend!"
+  },
+  {
+    "id": 3,
+    "name": "David Kim",
+    "role": "Digital Marketing Manager",
+    "company": "Growth Agency",
+    "avatar": "DK",
+    "rating": 5,
+    "text": "Best investment I've made in my career. The marketing strategies I learned here helped me increase our client's ROI by 300%. The content is always up-to-date and practical."
+  },
+  {
+    "id": 4,
+    "name": "Jessica Lee",
+    "role": "UI/UX Designer",
+    "company": "Design Studio",
+    "avatar": "JL",
+    "rating": 5,
+    "text": "The UI/UX course is phenomenal! The instructor breaks down complex concepts into easy-to-understand lessons. My design skills improved dramatically, and I'm now working on exciting projects."
+  }
+]

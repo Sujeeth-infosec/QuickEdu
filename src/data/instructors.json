@@ -1,0 +1,34 @@
+[
+  {
+    "id": "instructor-1",
+    "name": "John Anderson",
+    "title": "Senior Web Developer & Tech Educator",
+    "image": "instructor-1.jpg",
+    "rating": 4.8,
+    "students": 104620,
+    "courses": 8,
+    "bio": "John is a passionate educator with over 10 years of experience in web development. He has worked with companies like Google and Microsoft and now dedicates his time to teaching the next generation of developers.",
+    "expertise": ["Web Development", "JavaScript", "React", "Node.js", "Digital Marketing"],
+    "social": {
+      "twitter": "https://twitter.com/johndoe",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "website": "https://johndoe.com"
+    }
+  },
+  {
+    "id": "instructor-2",
+    "name": "Sarah Chen",
+    "title": "Data Scientist & AI Researcher",
+    "image": "instructor-2.jpg",
+    "rating": 4.9,
+    "students": 89543,
+    "courses": 6,
+    "bio": "Sarah holds a PhD in Machine Learning and has published numerous research papers. She has worked on AI projects at leading tech companies and is passionate about making data science accessible to everyone.",
+    "expertise": ["Data Science", "Machine Learning", "Python", "AI", "UI/UX Design"],
+    "social": {
+      "twitter": "https://twitter.com/sarahchen",
+      "linkedin": "https://linkedin.com/in/sarahchen",
+      "website": "https://sarahchen.ai"
+    }
+  }
+]
