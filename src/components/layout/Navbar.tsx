@@ -50,7 +50,7 @@ export const Navbar = () => {
             <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center shadow-glow transition-smooth group-hover:scale-110">
               <BookOpen className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-2xl font-bold text-gradient">EduMaster</span>
+            <span className="text-2xl font-bold text-gradient">QuickEdu</span>
           </Link>
 
           {/* Desktop Navigation */}

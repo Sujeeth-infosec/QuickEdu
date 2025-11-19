@@ -34,7 +34,7 @@ export const Footer = () => {
               <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
                 <BookOpen className="w-6 h-6 text-primary-foreground" />
               </div>
-              <span className="text-2xl font-bold text-gradient">EduMaster</span>
+              <span className="text-2xl font-bold text-gradient">QuickEdu</span>
             </Link>
             <p className="text-muted-foreground mb-4">
               Empowering learners worldwide with high-quality online education.
@@ -108,7 +108,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} EduMaster. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} QuickEdu. All rights reserved.</p>
         </div>
       </div>
     </footer>

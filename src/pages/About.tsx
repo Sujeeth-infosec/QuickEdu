@@ -59,7 +59,7 @@ const About = () => {
           >
             <Badge className="mb-6 gradient-accent text-white px-4 py-2">
               <Sparkles className="w-4 h-4 mr-2 inline" />
-              About EduMaster
+              About QuickEdu
             </Badge>
             <h1 className="text-5xl font-bold mb-4">
               Empowering Learners Worldwide
@@ -160,7 +160,7 @@ const About = () => {
             <Card className="p-8">
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 2020, EduMaster was born from a simple idea: that quality education should be accessible to everyone, everywhere. What started as a small team of passionate educators has grown into a global platform serving over 250,000 students across 195 countries.
+                  Founded in 2020, QuickEdu was born from a simple idea: that quality education should be accessible to everyone, everywhere. What started as a small team of passionate educators has grown into a global platform serving over 250,000 students across 195 countries.
                 </p>
                 <p>
                   Our platform brings together expert instructors from around the world who are passionate about sharing their knowledge and helping students succeed. Each course is carefully crafted to provide practical, hands-on learning experiences that prepare students for real-world challenges.

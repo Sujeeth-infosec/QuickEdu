@@ -16,19 +16,19 @@ const Terms = () => {
               <section>
                 <h2 className="text-2xl font-bold mb-4">1. Acceptance of Terms</h2>
                 <p className="text-muted-foreground">
-                  By accessing and using EduMaster, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to these terms, you should not use this platform.
+                  By accessing and using QuickEdu, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to these terms, you should not use this platform.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold mb-4">2. Use License</h2>
                 <p className="text-muted-foreground">
-                  Permission is granted to temporarily access the courses on EduMaster for personal, non-commercial use only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                  Permission is granted to temporarily access the courses on QuickEdu for personal, non-commercial use only. This is the grant of a license, not a transfer of title, and under this license you may not:
                 </p>
                 <ul className="list-disc pl-6 text-muted-foreground mt-2 space-y-1">
                   <li>Modify or copy the materials</li>
                   <li>Use the materials for any commercial purpose</li>
-                  <li>Attempt to decompile or reverse engineer any software contained on EduMaster</li>
+                  <li>Attempt to decompile or reverse engineer any software contained on QuickEdu</li>
                   <li>Remove any copyright or other proprietary notations from the materials</li>
                 </ul>
               </section>
@@ -57,14 +57,14 @@ const Terms = () => {
               <section>
                 <h2 className="text-2xl font-bold mb-4">6. Intellectual Property</h2>
                 <p className="text-muted-foreground">
-                  All content on EduMaster, including courses, videos, text, and graphics, are the property of EduMaster or its content suppliers and are protected by copyright laws.
+                  All content on QuickEdu, including courses, videos, text, and graphics, are the property of QuickEdu or its content suppliers and are protected by copyright laws.
                 </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-bold mb-4">7. Limitation of Liability</h2>
                 <p className="text-muted-foreground">
-                  EduMaster shall not be liable for any damages arising out of the use or inability to use the materials on EduMaster, even if EduMaster has been notified orally or in writing of the possibility of such damage.
+                  QuickEdu shall not be liable for any damages arising out of the use or inability to use the materials on QuickEdu, even if QuickEdu has been notified orally or in writing of the possibility of such damage.
                 </p>
               </section>
 
@@ -78,7 +78,7 @@ const Terms = () => {
               <section>
                 <h2 className="text-2xl font-bold mb-4">9. Contact Information</h2>
                 <p className="text-muted-foreground">
-                  If you have any questions about these Terms, please contact us at support@edumaster.com
+                  If you have any questions about these Terms, please contact us at support@quickedu.com
                 </p>
               </section>
 

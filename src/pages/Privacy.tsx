@@ -103,7 +103,7 @@ const Privacy = () => {
               <section>
                 <h2 className="text-2xl font-bold mb-4">10. Contact Us</h2>
                 <p className="text-muted-foreground">
-                  If you have questions about this privacy policy, please contact us at privacy@edumaster.com
+                  If you have questions about this privacy policy, please contact us at privacy@quickedu.com
                 </p>
               </section>
 

@@ -63,11 +63,11 @@ const Register = () => {
         className="w-full max-w-md"
       >
         {/* Logo */}
-        <Link to="/" className="flex items-center justify-center gap-2 mb-8">
+          <Link to="/" className="flex items-center justify-center gap-2 mb-8">
           <div className="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center shadow-glow">
             <BookOpen className="w-7 h-7 text-primary-foreground" />
           </div>
-          <span className="text-3xl font-bold text-gradient">EduMaster</span>
+          <span className="text-3xl font-bold text-gradient">QuickEdu</span>
         </Link>
 
         <Card className="p-8 shadow-elevated">
