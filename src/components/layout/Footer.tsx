@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BookOpen, Facebook, Twitter, Linkedin, Instagram, Mail } from "lucide-react";
+import { BookOpen, Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 export const Footer = () => {
   const footerLinks = {
@@ -87,21 +87,28 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Contact Info */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Stay Updated</h4>
-            <p className="text-muted-foreground mb-4 text-sm">
-              Subscribe to our newsletter for the latest courses and updates.
-            </p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 px-4 py-2 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
-              />
-              <button className="gradient-primary px-4 py-2 rounded-lg shadow-glow hover:opacity-90 transition-smooth">
-                <Mail className="w-4 h-4" />
-              </button>
+            <h4 className="font-semibold text-lg mb-4">Easy To Reach</h4>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-primary" />
+                <a href="tel:+919703264444" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
+                  +91 9703264444
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-primary" />
+                <a href="mailto:info@eduhub.org.in" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
+                  info@eduhub.org.in
+                </a>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-primary mt-1" />
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Flat No.24, Dollar Hills, Pragathi Nagar, Nizampet, Medchal- Malkajgiri District, Telangana State-500090
+                </p>
+              </div>
             </div>
           </div>
         </div>

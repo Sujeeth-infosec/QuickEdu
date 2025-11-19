@@ -1,15 +1,26 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Shield, Lock, Eye, Users } from "lucide-react";
 
 const Privacy = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50">
       <Navbar />
       
       <div className="pt-32 pb-16">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-blue-500 text-white px-4 py-2">
+              <Shield className="w-4 h-4 mr-2 inline" />
+              Privacy Policy
+            </Badge>
+            <h1 className="text-4xl font-bold mb-4">Your Privacy Matters</h1>
+            <p className="text-xl text-gray-600">
+              We are committed to protecting your personal information and privacy rights
+            </p>
+          </div>
           
           <Card className="p-8">
             <div className="prose prose-invert max-w-none space-y-6">
@@ -102,9 +113,16 @@ const Privacy = () => {
 
               <section>
                 <h2 className="text-2xl font-bold mb-4">10. Contact Us</h2>
-                <p className="text-muted-foreground">
-                  If you have questions about this privacy policy, please contact us at privacy@quickedu.com
-                </p>
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <p className="text-gray-700 mb-4">
+                    If you have questions about this privacy policy, please contact us:
+                  </p>
+                  <div className="space-y-2 text-gray-600">
+                    <p><strong>Email:</strong> info@eduhub.org.in</p>
+                    <p><strong>Phone:</strong> +91 9703264444</p>
+                    <p><strong>Address:</strong> Flat No.24, Dollar Hills, Pragathi Nagar, Nizampet, Medchal- Malkajgiri District, Telangana State-500090</p>
+                  </div>
+                </div>
               </section>
 
               <p className="text-sm text-muted-foreground mt-8">

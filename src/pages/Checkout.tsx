@@ -28,6 +28,19 @@ const Checkout = () => {
   const [paymentSuccess, setPaymentSuccess] = useState(false);
 
   const [formData, setFormData] = useState({
+    // Billing Details
+    firstName: "",
+    lastName: "",
+    companyName: "",
+    country: "India",
+    streetAddress: "",
+    apartment: "",
+    town: "",
+    state: "",
+    pincode: "",
+    phone: "",
+    emailAddress: "",
+    // Payment Details
     cardNumber: "",
     cardName: "",
     expiryDate: "",
@@ -55,7 +68,7 @@ const Checkout = () => {
         courseId: course.id,
         courseTitle: course.title,
         amount: course.price,
-        currency: "USD",
+        currency: "INR",
         userId: user.id,
         userName: user.name,
         userEmail: user.email,
@@ -122,8 +135,125 @@ const Checkout = () => {
             <p className="text-muted-foreground mb-8">Complete your purchase securely</p>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Payment Form */}
-              <div className="lg:col-span-2">
+              {/* Student Details & Payment Form */}
+              <div className="lg:col-span-2 space-y-6">
+                {/* Billing Details */}
+                <Card className="p-6">
+                  <h2 className="text-2xl font-bold mb-6">Billing details</h2>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="firstName">First name *</Label>
+                      <Input
+                        id="firstName"
+                        value={formData.firstName}
+                        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="lastName">Last name *</Label>
+                      <Input
+                        id="lastName"
+                        value={formData.lastName}
+                        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2 mb-4">
+                    <Label htmlFor="companyName">Company name (optional)</Label>
+                    <Input
+                      id="companyName"
+                      value={formData.companyName}
+                      onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                    />
+                  </div>
+
+                  <div className="space-y-2 mb-4">
+                    <Label htmlFor="country">Country / Region *</Label>
+                    <Input
+                      id="country"
+                      value={formData.country}
+                      onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-2 mb-4">
+                    <Label htmlFor="streetAddress">Street address *</Label>
+                    <Input
+                      id="streetAddress"
+                      value={formData.streetAddress}
+                      onChange={(e) => setFormData({ ...formData, streetAddress: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-2 mb-4">
+                    <Label htmlFor="apartment">Apartment, suite, unit, etc. (optional)</Label>
+                    <Input
+                      id="apartment"
+                      value={formData.apartment}
+                      onChange={(e) => setFormData({ ...formData, apartment: e.target.value })}
+                    />
+                  </div>
+
+                  <div className="space-y-2 mb-4">
+                    <Label htmlFor="town">Town / City *</Label>
+                    <Input
+                      id="town"
+                      value={formData.town}
+                      onChange={(e) => setFormData({ ...formData, town: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-2 mb-4">
+                    <Label htmlFor="state">State *</Label>
+                    <Input
+                      id="state"
+                      value={formData.state}
+                      onChange={(e) => setFormData({ ...formData, state: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-2 mb-4">
+                    <Label htmlFor="pincode">PIN Code *</Label>
+                    <Input
+                      id="pincode"
+                      value={formData.pincode}
+                      onChange={(e) => setFormData({ ...formData, pincode: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-2 mb-4">
+                    <Label htmlFor="phone">Phone *</Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="emailAddress">Email address *</Label>
+                    <Input
+                      id="emailAddress"
+                      type="email"
+                      value={formData.emailAddress}
+                      onChange={(e) => setFormData({ ...formData, emailAddress: e.target.value })}
+                      required
+                    />
+                  </div>
+                </Card>
+
+                {/* Payment Form */}
                 <Card className="p-6">
                   <div className="flex items-center gap-2 mb-6">
                     <Lock className="w-5 h-5 text-primary" />
@@ -202,7 +332,7 @@ const Checkout = () => {
                         </>
                       ) : (
                         <>
-                          Complete Purchase - ${course.price}
+                          Complete Purchase - {`₹${course.price.toLocaleString('en-IN')}`}
                         </>
                       )}
                     </Button>
@@ -226,21 +356,21 @@ const Checkout = () => {
                     <div className="space-y-2">
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">Original Price</span>
-                        <span className="line-through">${course.originalPrice}</span>
+                        <span className="line-through">{`₹${course.originalPrice.toLocaleString('en-IN')}`}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">Discount</span>
                         <span className="text-green-500">
-                          -${(course.originalPrice - course.price).toFixed(2)}
+                          -{`₹${(course.originalPrice - course.price).toLocaleString('en-IN')}`}
                         </span>
                       </div>
                     </div>
 
                     <Separator />
 
-                    <div className="flex justify-between text-lg font-bold">
+                      <div className="flex justify-between text-lg font-bold">
                       <span>Total</span>
-                      <span className="text-primary">${course.price}</span>
+                      <span className="text-primary">{`₹${course.price.toLocaleString('en-IN')}`}</span>
                     </div>
                   </div>
 

@@ -1,0 +1,259 @@
+import { motion } from "framer-motion";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, User, ArrowRight, TrendingUp, BookOpen, Users, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+
+const Blog = () => {
+  const [newsArticles, setNewsArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        // Using NewsAPI.org free tier (requires API key)
+        // Alternative: Using JSONPlaceholder for demo
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=6');
+        const posts = await response.json();
+        
+        const formattedNews = posts.map((post, index) => ({
+          id: `news-${post.id}`,
+          title: post.title.charAt(0).toUpperCase() + post.title.slice(1),
+          excerpt: post.body.substring(0, 150) + '...',
+          category: 'News',
+          author: 'Education Reporter',
+          date: new Date(Date.now() - index * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+          readTime: '3 min read',
+          image: `https://picsum.photos/800/400?random=${post.id}`,
+          isExternal: true
+        }));
+        
+        setNewsArticles(formattedNews);
+      } catch (error) {
+        console.error('Error fetching news:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, []);
+
+  const blogPosts = [
+    {
+      id: 1,
+      title: "The Future of AI in Education: Transforming Learning Experiences",
+      excerpt: "Discover how artificial intelligence is revolutionizing online education and creating personalized learning paths for students worldwide.",
+      category: "Research",
+      author: "Dr. Sarah Johnson",
+      date: "2024-01-15",
+      readTime: "5 min read",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 2,
+      title: "Remote Learning Statistics: 2024 Global Education Report",
+      excerpt: "Latest research shows 73% increase in online course enrollment. Explore the comprehensive data on remote learning trends and student outcomes.",
+      category: "News",
+      author: "Michael Chen",
+      date: "2024-01-12",
+      readTime: "8 min read",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 3,
+      title: "Breakthrough in Microlearning: 15-Minute Sessions Show 40% Better Retention",
+      excerpt: "New research from Stanford University reveals that short, focused learning sessions significantly improve knowledge retention and student engagement.",
+      category: "Research",
+      author: "Prof. Emily Rodriguez",
+      date: "2024-01-10",
+      readTime: "6 min read",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 4,
+      title: "QuickEdu Reaches 300,000 Students Milestone Across 200 Countries",
+      excerpt: "Celebrating our global community growth and the launch of 50 new courses in emerging technologies including blockchain and quantum computing.",
+      category: "News",
+      author: "QuickEdu Team",
+      date: "2024-01-08",
+      readTime: "4 min read",
+      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 5,
+      title: "The Science Behind Effective Online Learning: Cognitive Load Theory",
+      excerpt: "Understanding how the human brain processes information can help design better online courses. Latest neuroscience research insights.",
+      category: "Research",
+      author: "Dr. James Wilson",
+      date: "2024-01-05",
+      readTime: "7 min read",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 6,
+      title: "Industry Report: Top 10 Most In-Demand Skills for 2024",
+      excerpt: "Based on analysis of 50,000+ job postings, we reveal the skills that employers are actively seeking in the current market.",
+      category: "News",
+      author: "Career Research Team",
+      date: "2024-01-03",
+      readTime: "10 min read",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ];
+
+  const categories = ["All", "News", "Research"];
+  const allPosts = [...blogPosts, ...newsArticles];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50">
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/95 via-blue-900/90 to-indigo-900/95"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <Badge className="mb-6 bg-white/20 backdrop-blur-sm text-white px-6 py-3">
+              <BookOpen className="w-4 h-4 mr-2 inline" />
+              Education Blog
+            </Badge>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
+              Latest News & Research
+            </h1>
+            <p className="text-xl text-gray-200 mb-8 drop-shadow-md">
+              Stay updated with the latest trends, research, and insights in online education
+            </p>
+            <div className="flex items-center justify-center gap-8 text-white/80">
+              <div className="flex items-center gap-2">
+                <TrendingUp className="w-5 h-5" />
+                <span className="text-sm">Latest Trends</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-5 h-5" />
+                <span className="text-sm">Expert Insights</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Blog Posts */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          {/* Category Filter */}
+          <div className="flex justify-center mb-12">
+            <div className="flex gap-4">
+              {categories.map((category) => (
+                <Badge
+                  key={category}
+                  variant={category === "All" ? "default" : "outline"}
+                  className="px-6 py-2 cursor-pointer hover:bg-primary hover:text-white transition-colors"
+                >
+                  {category}
+                </Badge>
+              ))}
+            </div>
+          </div>
+
+          {/* Loading State */}
+          {loading && (
+            <div className="text-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
+              <p className="mt-4 text-gray-600">Loading latest news...</p>
+            </div>
+          )}
+
+          {/* Blog Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {!loading && allPosts.map((post, index) => (
+              <motion.div
+                key={post.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group h-full">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <Badge 
+                      className={`absolute top-4 left-4 ${
+                        post.category === 'Research' ? 'bg-blue-500' : 'bg-green-500'
+                      } text-white`}
+                    >
+                      {post.category}
+                    </Badge>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        <span>{new Date(post.date).toLocaleDateString()}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <User className="w-4 h-4" />
+                        <span>{post.author}</span>
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">{post.readTime}</span>
+                      {post.isExternal ? (
+                        <a 
+                          href="#"
+                          className="flex items-center gap-2 text-primary hover:gap-3 transition-all font-medium"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Read More
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      ) : (
+                        <Link 
+                          to={`/blog/${post.id}`}
+                          className="flex items-center gap-2 text-primary hover:gap-3 transition-all font-medium"
+                        >
+                          Read More
+                          <ArrowRight className="w-4 h-4" />
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Blog;

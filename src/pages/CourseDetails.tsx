@@ -163,10 +163,10 @@ const CourseDetails = () => {
                   </div>
                   <div className="p-6">
                     <div className="mb-6">
-                      <div className="flex items-baseline gap-3 mb-2">
-                        <span className="text-4xl font-bold text-primary">${course.price}</span>
+                        <div className="flex items-baseline gap-3 mb-2">
+                        <span className="text-4xl font-bold text-primary">{`₹${course.price.toLocaleString('en-IN')}`}</span>
                         <span className="text-xl text-muted-foreground line-through">
-                          ${course.originalPrice}
+                          {`₹${course.originalPrice.toLocaleString('en-IN')}`}
                         </span>
                       </div>
                       <Badge className="gradient-accent text-white">

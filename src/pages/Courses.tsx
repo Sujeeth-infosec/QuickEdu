@@ -186,10 +186,10 @@ const Courses = () => {
                             </div>
 
                             <div className="flex items-center justify-between pt-3 border-t border-border">
-                              <div>
-                                <span className="text-2xl font-bold text-primary">${course.price}</span>
+                            <div>
+                                <span className="text-2xl font-bold text-primary">{`₹${course.price.toLocaleString('en-IN')}`}</span>
                                 <span className="text-sm text-muted-foreground line-through ml-2">
-                                  ${course.originalPrice}
+                                  {`₹${course.originalPrice.toLocaleString('en-IN')}`}
                                 </span>
                               </div>
                               <ChevronRight className="w-5 h-5 text-primary group-hover:translate-x-1 transition-smooth" />

@@ -189,7 +189,7 @@ const Dashboard = () => {
                         <h3 className="font-bold mb-2 group-hover:text-primary transition-smooth line-clamp-2">
                           {course.title}
                         </h3>
-                        <div className="text-2xl font-bold text-primary">${course.price}</div>
+                        <div className="text-2xl font-bold text-primary">{`₹${course.price.toLocaleString('en-IN')}`}</div>
                       </div>
                     </Card>
                   </Link>

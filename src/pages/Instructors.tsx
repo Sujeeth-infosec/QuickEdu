@@ -20,18 +20,46 @@ const Instructors = () => {
       <Navbar />
 
       {/* Header */}
-      <section className="pt-32 pb-16 bg-gradient-dark">
-        <div className="container mx-auto px-4">
+      <section className="pt-32 pb-16 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-purple-900/90 to-blue-900/95"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <GraduationCap className="w-16 h-16 mx-auto mb-6 text-primary" />
-            <h1 className="text-5xl font-bold mb-4">Meet Our Expert Instructors</h1>
-            <p className="text-xl text-muted-foreground">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl">
+                <GraduationCap className="w-10 h-10 text-white" />
+              </div>
+            </div>
+            <h1 className="text-5xl font-bold mb-4 text-white drop-shadow-lg">Meet Our Expert Instructors</h1>
+            <p className="text-xl text-gray-200 drop-shadow-md">
               Learn from industry professionals with years of real-world experience
             </p>
+            <div className="flex items-center justify-center gap-8 mt-8 text-white/80">
+              <div className="flex items-center gap-2">
+                <Users className="w-5 h-5" />
+                <span className="text-sm">500+ Expert Instructors</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-5 h-5" />
+                <span className="text-sm">1000+ Courses Taught</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Star className="w-5 h-5 text-yellow-400" />
+                <span className="text-sm">4.8 Average Rating</span>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -39,65 +67,54 @@ const Instructors = () => {
       {/* Instructors Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {instructors.map((instructor, index) => (
-              <motion.div
-                key={instructor.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-              >
-                <Card className="overflow-hidden hover:shadow-elevated transition-all duration-300 border-2 hover:border-primary">
-                  <div className="p-8">
-                    <div className="flex flex-col items-center text-center mb-6">
-                      <Avatar className="w-32 h-32 mb-4 border-4 border-primary shadow-glow">
-                        <AvatarImage src={instructorImages[instructor.image]} alt={instructor.name} />
-                        <AvatarFallback className="text-3xl gradient-primary text-primary-foreground">
-                          {instructor.name.charAt(0)}
-                        </AvatarFallback>
-                      </Avatar>
-                      <h3 className="text-2xl font-bold mb-2">{instructor.name}</h3>
-                      <p className="text-muted-foreground mb-4">{instructor.title}</p>
-                    </div>
-
-                    <div className="grid grid-cols-3 gap-4 mb-6 text-center">
-                      <div>
-                        <div className="flex items-center justify-center gap-1 text-sm mb-1">
-                          <Star className="w-4 h-4 fill-yellow-500 text-yellow-500" />
-                          <span className="font-bold">{instructor.rating}</span>
+          <div className="max-w-6xl mx-auto">
+            <div className="overflow-x-auto -mx-4 px-4 py-4">
+              <div className="flex gap-4 snap-x snap-mandatory">
+                {instructors.map((instructor, index) => (
+                  <motion.div
+                    key={instructor.id}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                    className="snap-start flex-shrink-0"
+                  >
+                    <Card className="w-64 min-h-[220px] overflow-hidden hover:shadow-elevated transition-transform duration-200 transform hover:-translate-y-1 border">
+                      <div className="p-4">
+                        <div className="flex items-center gap-3 mb-3">
+                          <Avatar className="w-12 h-12 border">
+                            {instructor.image && instructorImages[instructor.image] ? (
+                              <AvatarImage src={instructorImages[instructor.image]} alt={instructor.name} />
+                            ) : (
+                              <AvatarFallback className="text-sm font-semibold">{instructor.avatar || instructor.name.split(' ').map(n=>n[0]).slice(0,2).join('')}</AvatarFallback>
+                            )}
+                          </Avatar>
+                          <div>
+                            <div className="font-semibold">{instructor.name}</div>
+                            <div className="text-xs text-muted-foreground">{instructor.title}</div>
+                          </div>
                         </div>
-                        <div className="text-xs text-muted-foreground">Rating</div>
-                      </div>
-                      <div>
-                        <div className="flex items-center justify-center gap-1 text-sm mb-1">
-                          <Users className="w-4 h-4 text-primary" />
-                          <span className="font-bold">{instructor.students.toLocaleString()}</span>
-                        </div>
-                        <div className="text-xs text-muted-foreground">Students</div>
-                      </div>
-                      <div>
-                        <div className="flex items-center justify-center gap-1 text-sm mb-1">
-                          <BookOpen className="w-4 h-4 text-primary" />
-                          <span className="font-bold">{instructor.courses}</span>
-                        </div>
-                        <div className="text-xs text-muted-foreground">Courses</div>
-                      </div>
-                    </div>
 
-                    <p className="text-muted-foreground mb-6 leading-relaxed">{instructor.bio}</p>
+                        <div className="flex items-center justify-between text-sm mb-3">
+                          <div className="flex items-center gap-1 text-xs">
+                            <Star className="w-4 h-4 text-yellow-400" />
+                            <span className="font-medium">{instructor.rating}</span>
+                          </div>
+                          <div className="text-xs text-muted-foreground">{instructor.students.toLocaleString()} students</div>
+                        </div>
 
-                    <div>
-                      <div className="text-sm font-semibold mb-2">Expertise</div>
-                      <div className="flex flex-wrap gap-2">
-                        {instructor.expertise.map((skill, i) => (
-                          <Badge key={i} variant="secondary">{skill}</Badge>
-                        ))}
+                        <div className="text-xs text-muted-foreground mb-2 truncate">{instructor.bio}</div>
+
+                        <div className="flex flex-wrap gap-1 mt-2">
+                          {instructor.expertise.slice(0,3).map((skill, i) => (
+                            <Badge key={i} variant="secondary" className="text-xs">{skill}</Badge>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
