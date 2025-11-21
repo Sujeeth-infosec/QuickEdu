@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, BookOpen, User, LogOut, ChevronDown } from "lucide-react";
+import { Menu, X, GraduationCap, User, LogOut, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getCurrentUser, logout, isAuthenticated } from "@/lib/auth";
@@ -54,7 +54,7 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center shadow-glow transition-smooth group-hover:scale-110">
-              <BookOpen className="w-6 h-6 text-primary-foreground" />
+              <GraduationCap className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-2xl font-bold text-gradient">QuickEdu</span>
           </Link>

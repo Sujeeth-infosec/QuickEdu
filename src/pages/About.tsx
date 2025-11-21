@@ -265,8 +265,18 @@ const About = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="container mx-auto px-4">
+      <section className="py-16 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.1
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 z-10"></div>
+        <div className="container mx-auto px-4 relative z-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-white">Why Choose QuickEdu?</h2>
             <p className="text-xl text-purple-100">Features that make us stand out</p>

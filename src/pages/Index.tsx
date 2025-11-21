@@ -354,72 +354,11 @@ const Index = () => {
             >
               <div className="relative">
                 <img
-                  src={socialMediaImage}
-                  alt="Creative student portfolio showcase"
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                  alt="AI-powered learning and student projects showcase"
                   className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-xl">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium text-gray-700">Live Projects</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
-      {/* Creative Portfolio Showcase */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="order-2 lg:order-1"
-            >
-              <Badge className="mb-6 gradient-primary text-white px-4 py-2">
-                <Sparkles className="w-4 h-4 mr-2 inline" />
-                Student Showcase
-              </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Creative Projects by Our Students
-              </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                See the amazing work created by our students in design, digital art, and creative media courses. From concept to completion, witness the transformation of ideas into professional portfolios.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">500+</div>
-                  <div className="text-sm text-gray-600">Projects Completed</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
-                  <div className="text-sm text-gray-600">Portfolio Success</div>
-                </div>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="order-1 lg:order-2"
-            >
-              <div className="relative">
-                <img
-                  src={socialMediaImage}
-                  alt="Creative student portfolio showcase"
-                  className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-xl">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium text-gray-700">Live Projects</span>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </div>

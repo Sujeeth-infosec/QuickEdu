@@ -93,8 +93,8 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary" />
-                <a href="tel:+919703264444" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
-                  +91 9703264444
+                <a href="tel:+919392328940" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
+                  +91 9392328940
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -106,7 +106,7 @@ export const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-1" />
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Flat No.24, Dollar Hills, Pragathi Nagar, Nizampet, Medchal- Malkajgiri District, Telangana State-500090
+                  PLOT NO. 39/C, H. NO. 301, SR TOWERS, HMT HILLS, ADDAGUTTA, KUKATPALLY, TIRUMALAGIRI, HYDERABAD, TELANGANA - 500072
                 </p>
               </div>
             </div>
