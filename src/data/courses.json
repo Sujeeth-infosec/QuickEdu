@@ -1,5 +1,35 @@
 [
   {
+    "id": "test-it-course",
+    "title": "IT Fundamentals - Payment Test Course",
+    "slug": "it-fundamentals-test",
+    "category": "IT",
+    "level": "Beginner",
+    "rating": 4.5,
+    "reviews": 1,
+    "students": 1,
+    "price": 1,
+    "originalPrice": 2,
+    "image": "course-web-dev.jpg",
+    "instructor": "Test Instructor",
+    "instructorId": "instructor-test",
+    "duration": "1 hour",
+    "lectures": 1,
+    "description": "Test course for payment gateway integration. This course is priced at ₹1 for testing payment functionality.",
+    "highlights": [
+      "Payment testing",
+      "Basic IT concepts",
+      "Quick completion"
+    ],
+    "curriculum": [
+      {
+        "section": "Test Section",
+        "lectures": 1,
+        "duration": "1h"
+      }
+    ]
+  },
+  {
     "id": "web-dev-bootcamp",
     "title": "Complete Web Development Bootcamp",
     "slug": "web-development-bootcamp",

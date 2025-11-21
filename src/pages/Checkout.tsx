@@ -122,10 +122,18 @@ const Checkout = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      {/* Background Design */}
+      <div 
+        className="absolute inset-0 opacity-15 bg-no-repeat bg-center bg-cover pointer-events-none"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1920&h=1080&fit=crop&crop=center&auto=format&q=80')"
+        }}
+      />
+      
       <Navbar />
 
-      <div className="pt-32 pb-16">
+      <div className="pt-32 pb-16 relative z-10">
         <div className="container mx-auto px-4 max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

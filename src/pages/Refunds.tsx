@@ -127,7 +127,7 @@ const Refunds = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email Support</h3>
-                    <p className="text-gray-600">refunds@eduhub.org.in</p>
+                    <p className="text-gray-600">refunds@quickedu.org.in</p>
                     <p className="text-sm text-gray-500">Response within 24 hours</p>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ const Refunds = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Phone Support</h3>
-                    <p className="text-gray-600">+91 9703264444</p>
+                    <p className="text-gray-600">+91 9392328940</p>
                     <p className="text-sm text-gray-500">Mon-Fri, 9 AM - 6 PM IST</p>
                   </div>
                 </div>

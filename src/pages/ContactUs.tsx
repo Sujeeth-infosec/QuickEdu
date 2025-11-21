@@ -38,7 +38,7 @@ const ContactUs = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "support@quickedu.com",
+      details: "info@quickedu.org.in",
       description: "Send us an email anytime",
       color: "from-blue-500 to-blue-600"
     },

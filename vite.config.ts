@@ -8,6 +8,10 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    // allow localtunnel / loca.lt hosts used for temporary public URLs
+    allowedHosts: [
+      'heavy-schools-shine.loca.lt'
+    ],
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {

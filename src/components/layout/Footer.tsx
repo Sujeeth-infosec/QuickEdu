@@ -99,8 +99,8 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:info@eduhub.org.in" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
-                  info@eduhub.org.in
+                <a href="mailto:info@quickedu.org.in" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
+                  info@quickedu.org.in
                 </a>
               </div>
               <div className="flex items-start gap-3">

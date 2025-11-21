@@ -17,16 +17,17 @@ import {
   BookOpen
 } from "lucide-react";
 import courses from "@/data/courses.json";
-import courseWebDev from "@/assets/course-web-dev.jpg";
-import courseDataScience from "@/assets/course-data-science.jpg";
-import courseMarketing from "@/assets/course-marketing.jpg";
-import courseDesign from "@/assets/course-design.jpg";
-
 const courseImages: Record<string, string> = {
-  "course-web-dev.jpg": courseWebDev,
-  "course-data-science.jpg": courseDataScience,
-  "course-marketing.jpg": courseMarketing,
-  "course-design.jpg": courseDesign,
+  "course-web-dev.jpg": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+  "course-data-science.jpg": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+  "course-marketing.jpg": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+  "course-design.jpg": "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+  "course-ai-ml.jpg": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+  "course-mobile-dev.jpg": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+  "course-cloud.jpg": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+  "course-cybersecurity.jpg": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+  "course-blockchain.jpg": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=800&fit=crop&crop=center&auto=format&q=80",
+  "course-devops.jpg": "https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=800&h=800&fit=crop&crop=center&auto=format&q=80"
 };
 
 const Courses = () => {

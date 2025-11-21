@@ -35,10 +35,16 @@ import socialMediaImage from "@/assets/social media.png";
 import { ThreeBackground } from "@/components/ui/three-background";
 
 const courseImages: Record<string, string> = {
-  "course-web-dev.jpg": courseWebDev,
-  "course-data-science.jpg": courseDataScience,
-  "course-marketing.jpg": courseMarketing,
-  "course-design.jpg": courseDesign,
+  "course-web-dev.jpg": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "course-data-science.jpg": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "course-marketing.jpg": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "course-design.jpg": "https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "course-ai.jpg": "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "course-mobile.jpg": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "course-cloud.jpg": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "course-cybersecurity.jpg": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "course-blockchain.jpg": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  "course-devops.jpg": "https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
 };
 
 const Index = () => {

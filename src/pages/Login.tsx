@@ -38,11 +38,44 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-dark flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+      {/* Animated Geometric Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div 
+          className="absolute top-20 left-20 w-32 h-32 bg-purple-200/70 rounded-full blur-xl"
+          animate={{ y: [-10, 10, -10], rotate: [0, 5, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute top-40 right-32 w-24 h-24 bg-indigo-200/80 rounded-lg"
+          animate={{ rotate: [45, 90, 45], scale: [1, 1.1, 1] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute bottom-32 left-32 w-40 h-40 bg-violet-200/65 rounded-full"
+          animate={{ x: [-5, 15, -5], y: [0, -10, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute bottom-20 right-20 w-28 h-28 bg-purple-300/60 rounded-lg"
+          animate={{ rotate: [12, -12, 12], y: [-5, 5, -5] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute top-1/2 left-10 w-16 h-16 bg-indigo-300/70 rounded-full"
+          animate={{ scale: [1, 1.2, 1], opacity: [0.7, 0.9, 0.7] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute top-1/3 right-10 w-20 h-20 bg-violet-200/75 rounded-lg"
+          animate={{ rotate: [-12, 12, -12], x: [-3, 3, -3] }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="w-full max-w-md"
+        className="w-full max-w-md relative z-10"
       >
         {/* Logo */}
         <Link to="/" className="flex items-center justify-center gap-2 mb-8">
@@ -108,12 +141,7 @@ const Login = () => {
             </Button>
           </form>
 
-          <div className="mt-6 text-center">
-            <p className="text-sm text-muted-foreground">
-              Demo: email: <span className="font-mono">demo@example.com</span>, password:{" "}
-              <span className="font-mono">demo123</span>
-            </p>
-          </div>
+
 
           <div className="mt-6 text-center">
             <p className="text-muted-foreground">

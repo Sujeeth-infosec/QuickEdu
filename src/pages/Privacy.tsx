@@ -118,9 +118,9 @@ const Privacy = () => {
                     If you have questions about this privacy policy, please contact us:
                   </p>
                   <div className="space-y-2 text-gray-600">
-                    <p><strong>Email:</strong> info@eduhub.org.in</p>
-                    <p><strong>Phone:</strong> +91 9703264444</p>
-                    <p><strong>Address:</strong> Flat No.24, Dollar Hills, Pragathi Nagar, Nizampet, Medchal- Malkajgiri District, Telangana State-500090</p>
+                    <p><strong>Email:</strong> info@quickedu.org.in</p>
+                    <p><strong>Phone:</strong> +91 9392328940</p>
+                    <p><strong>Address:</strong> PLOT NO. 39/C, H. NO. 301, SR TOWERS, HMT HILLS, ADDAGUTTA, KUKATPALLY, TIRUMALAGIRI, HYDERABAD, TELANGANA - 500072</p>
                   </div>
                 </div>
               </section>
