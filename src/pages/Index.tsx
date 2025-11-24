@@ -32,19 +32,114 @@ import courseDataScience from "@/assets/course-data-science.jpg";
 import courseMarketing from "@/assets/course-marketing.jpg";
 import courseDesign from "@/assets/course-design.jpg";
 import socialMediaImage from "@/assets/social media.png";
-import { ThreeBackground } from "@/components/ui/three-background";
+import ThreeBackground from "@/components/ui/ThreeBackground";
 
-const courseImages: Record<string, string> = {
-  "course-web-dev.jpg": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  "course-data-science.jpg": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  "course-marketing.jpg": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  "course-design.jpg": "https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  "course-ai.jpg": "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  "course-mobile.jpg": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  "course-cloud.jpg": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  "course-cybersecurity.jpg": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  "course-blockchain.jpg": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  "course-devops.jpg": "https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+// Generate unique image for each course based on course ID
+const getCourseImage = (courseId: string, category: string) => {
+  const imageMap: Record<string, string> = {
+    // Web Development
+    "test-it-course": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&auto=format&q=80",
+    "web-dev-bootcamp": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-001": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-002": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-004": "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-026": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-028": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-031": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-036": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-037": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-052": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-057": "https://images.unsplash.com/photo-1545670723-196ed0954986?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-059": "https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-060": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-065": "https://images.unsplash.com/photo-1555949963-f7fe82fcdc00?w=800&h=600&fit=crop&auto=format&q=80",
+    
+    // Data Science
+    "data-science-ai": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-003": "https://images.unsplash.com/photo-1527474305487-b87b222841cc?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-010": "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-011": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-012": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-016": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-018": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-038": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-044": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-046": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-049": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-051": "https://images.unsplash.com/photo-1526379879527-8559ecfcaec0?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-054": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-062": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-063": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&h=600&fit=crop&auto=format&q=80",
+    
+    // Marketing
+    "digital-marketing": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-008": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-020": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-025": "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-030": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-045": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-050": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-055": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-058": "https://images.unsplash.com/photo-1556155092-8707de31f9c4?w=800&h=600&fit=crop&auto=format&q=80",
+    
+    // Design
+    "ui-ux-design": "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-009": "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-022": "https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-023": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-035": "https://images.unsplash.com/photo-1559028006-448665bd7c7f?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-047": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-053": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-061": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-064": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-070": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop&auto=format&q=80",
+    
+    // Mobile
+    "course-006": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-007": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-043": "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-068": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop&auto=format&q=80",
+    
+    // Cloud
+    "course-005": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-019": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-041": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-056": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&auto=format&q=80",
+    
+    // DevOps
+    "course-014": "https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-033": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-048": "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-069": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80",
+    
+    // Security
+    "course-015": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-032": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-039": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&h=600&fit=crop&auto=format&q=80",
+    
+    // Business
+    "course-021": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-034": "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-040": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-066": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop&auto=format&q=80",
+    
+    // Product
+    "course-013": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-067": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80",
+    
+    // Career
+    "course-029": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-042": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop&auto=format&q=80",
+    
+    // Technology
+    "course-017": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop&auto=format&q=80",
+    "course-024": "https://images.unsplash.com/photo-1555949963-f7fe82fcdc00?w=800&h=600&fit=crop&auto=format&q=80",
+    
+    // AI
+    "course-027": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop&auto=format&q=80"
+  };
+  
+  return imageMap[courseId] || `https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&auto=format&q=80`;
 };
 
 const Index = () => {
@@ -157,15 +252,21 @@ const Index = () => {
 
       {/* Scrolling Courses Ticker */}
       <section className="py-12 relative overflow-hidden">
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-600/90 via-pink-600/85 to-purple-600/90"></div>
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-600/90 via-pink-600/85 to-purple-600/90 animate-gradient-x"></div>
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-10 left-10 w-32 h-32 bg-white/20 rounded-full animate-float"></div>
+            <div className="absolute top-20 right-20 w-24 h-24 bg-white/15 rounded-full animate-float-delayed"></div>
+            <div className="absolute bottom-10 left-1/3 w-20 h-20 bg-white/10 rounded-full animate-float"></div>
+          </div>
+          <div 
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage: `url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&h=1080&fit=crop&auto=format&q=80')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          ></div>
         </div>
         <div className="container mx-auto px-4 text-center mb-6 relative z-10">
           <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">🎯 These are the courses waiting for you!!! 🚀</h3>
@@ -230,6 +331,247 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Learn Anywhere Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative h-96"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 rounded-2xl animate-gradient-shift">
+                <div className="absolute top-10 left-10 w-20 h-20 bg-white/20 rounded-full animate-float-3d"></div>
+                <div className="absolute top-20 right-16 w-16 h-16 bg-yellow-400/30 rounded-lg animate-rotate-3d"></div>
+                <div className="absolute bottom-16 left-20 w-12 h-12 bg-green-400/40 rounded-full animate-bounce-3d"></div>
+                <div className="absolute bottom-20 right-10 w-24 h-6 bg-white/10 rounded-full animate-pulse-3d"></div>
+                {/* Animated Device Mockup */}
+                <div className="absolute inset-8 bg-gray-900 rounded-xl animate-device-glow">
+                  <div className="absolute top-4 left-4 right-4 h-8 bg-gray-800 rounded flex items-center gap-2 px-3">
+                    <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                  </div>
+                  <div className="absolute top-16 left-4 right-4 bottom-4 bg-white rounded animate-screen-flicker">
+                    <div className="p-4 space-y-3">
+                      <div className="h-4 bg-blue-200 rounded animate-loading-bar"></div>
+                      <div className="h-4 bg-purple-200 rounded animate-loading-bar" style={{animationDelay: '0.5s'}}></div>
+                      <div className="h-4 bg-pink-200 rounded animate-loading-bar" style={{animationDelay: '1s'}}></div>
+                      <div className="mt-6 grid grid-cols-2 gap-2">
+                        <div className="h-16 bg-gradient-to-r from-blue-400 to-purple-400 rounded animate-card-flip"></div>
+                        <div className="h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded animate-card-flip" style={{animationDelay: '0.3s'}}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <Badge className="mb-4 gradient-primary text-white px-4 py-2">
+                Flexible Learning
+              </Badge>
+              <h2 className="text-4xl font-bold mb-6">
+                Learn Anywhere, Anytime
+              </h2>
+              <p className="text-xl text-gray-600 mb-6">
+                Access your courses on any device. Our platform adapts to your lifestyle, whether you're at home, commuting, or traveling.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500" />
+                  <span>Mobile-optimized learning experience</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500" />
+                  <span>Offline content download</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500" />
+                  <span>Progress sync across devices</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Expert Instructors Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative h-96"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-gray-900 to-black rounded-2xl animate-gradient-shift">
+                <div className="absolute top-6 left-6 w-20 h-3 bg-green-400/80 rounded animate-pulse"></div>
+                <div className="absolute top-12 left-6 text-white text-xs font-bold">INDUSTRY LEADERS NETWORK</div>
+                <div className="absolute bottom-20 right-8 w-16 h-16 bg-blue-400/40 rounded-full animate-bounce-3d"></div>
+                {/* Professional Network Mockup */}
+                <div className="absolute inset-8 bg-gray-800 rounded-lg animate-device-glow">
+                  <div className="absolute top-3 left-3 right-3 h-6 bg-gray-700 rounded flex items-center px-2">
+                    <div className="text-xs text-white font-bold">Expert Guidance Platform</div>
+                  </div>
+                  <div className="absolute top-12 left-3 right-3 bottom-16">
+                    <div className="grid grid-cols-3 gap-2 h-full">
+                      {/* Company Logos */}
+                      <div className="bg-gradient-to-br from-blue-600 to-blue-400 rounded flex items-center justify-center animate-instructor-glow">
+                        <div className="text-white text-xs font-bold">GOOGLE</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-green-600 to-green-400 rounded flex items-center justify-center animate-instructor-glow" style={{animationDelay: '0.3s'}}>
+                        <div className="text-white text-xs font-bold">MSFT</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-orange-600 to-orange-400 rounded flex items-center justify-center animate-instructor-glow" style={{animationDelay: '0.6s'}}>
+                        <div className="text-white text-xs font-bold">AMZN</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-purple-600 to-purple-400 rounded flex items-center justify-center animate-instructor-glow" style={{animationDelay: '0.9s'}}>
+                        <div className="text-white text-xs font-bold">META</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-red-600 to-red-400 rounded flex items-center justify-center animate-instructor-glow" style={{animationDelay: '1.2s'}}>
+                        <div className="text-white text-xs font-bold">NFLX</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-indigo-600 to-indigo-400 rounded flex items-center justify-center animate-instructor-glow" style={{animationDelay: '1.5s'}}>
+                        <div className="text-white text-xs font-bold">UBER</div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Stats Bar */}
+                  <div className="absolute bottom-3 left-3 right-3 flex gap-2">
+                    <div className="flex-1 h-6 bg-gradient-to-r from-blue-500 to-cyan-400 rounded flex items-center justify-center animate-stat-pulse">
+                      <div className="text-xs font-bold text-white">150+ Experts</div>
+                    </div>
+                    <div className="flex-1 h-6 bg-gradient-to-r from-purple-500 to-pink-400 rounded flex items-center justify-center animate-stat-pulse" style={{animationDelay: '0.3s'}}>
+                      <div className="text-xs font-bold text-white">15+ Years</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <Badge className="mb-4 gradient-accent text-white px-4 py-2">
+                Expert Guidance
+              </Badge>
+              <h2 className="text-4xl font-bold mb-6">
+                Learn from Industry Leaders
+              </h2>
+              <p className="text-xl text-gray-600 mb-6">
+                Our instructors are working professionals from top companies like Google, Microsoft, and Amazon. Get real-world insights and practical knowledge.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center p-4 bg-white rounded-xl shadow-lg">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">150+</div>
+                  <div className="text-sm text-gray-600">Expert Instructors</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-xl shadow-lg">
+                  <div className="text-3xl font-bold text-purple-600 mb-2">15+</div>
+                  <div className="text-sm text-gray-600">Years Experience</div>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="order-1 lg:order-2 relative h-96 hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-tr from-indigo-600 via-blue-500 to-cyan-400 rounded-2xl animate-gradient-shift">
+                <div className="absolute top-8 left-8 w-32 h-4 bg-white/20 rounded animate-slide-right"></div>
+                <div className="absolute top-16 left-12 w-24 h-4 bg-white/15 rounded animate-slide-right" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute top-24 left-8 w-28 h-4 bg-white/10 rounded animate-slide-right" style={{animationDelay: '1s'}}></div>
+                <div className="absolute bottom-20 right-8 w-16 h-16 bg-yellow-400/40 rounded-full animate-bounce-3d"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white text-6xl animate-pulse-slow">👨‍🏫</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Career Growth Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative h-96"
+            >
+              <div className="absolute inset-0 bg-gradient-to-bl from-green-500 via-emerald-600 to-teal-500 rounded-2xl animate-gradient-shift">
+                <div className="absolute top-12 left-12 w-8 h-20 bg-white/30 rounded animate-grow-up"></div>
+                <div className="absolute top-8 left-24 w-8 h-24 bg-white/25 rounded animate-grow-up" style={{animationDelay: '0.3s'}}></div>
+                <div className="absolute top-4 left-36 w-8 h-28 bg-white/20 rounded animate-grow-up" style={{animationDelay: '0.6s'}}></div>
+                <div className="absolute bottom-16 right-12 w-20 h-20 bg-yellow-400/40 rounded-full animate-rotate-3d"></div>
+                {/* Dashboard Mockup */}
+                <div className="absolute inset-6 bg-white/95 rounded-lg animate-dashboard-glow">
+                  <div className="absolute top-4 left-4 right-4 h-8 bg-gray-100 rounded flex items-center px-3">
+                    <div className="text-xs font-bold text-gray-600">Career Dashboard</div>
+                  </div>
+                  <div className="absolute top-16 left-4 right-4 bottom-16">
+                    <div className="relative h-full flex items-end justify-center gap-3">
+                      <div className="w-8 bg-gradient-to-t from-blue-500 to-blue-300 rounded-t animate-chart-grow" style={{height: '40%'}}></div>
+                      <div className="w-8 bg-gradient-to-t from-purple-500 to-purple-300 rounded-t animate-chart-grow" style={{height: '60%', animationDelay: '0.2s'}}></div>
+                      <div className="w-8 bg-gradient-to-t from-green-500 to-green-300 rounded-t animate-chart-grow" style={{height: '80%', animationDelay: '0.4s'}}></div>
+                      <div className="w-8 bg-gradient-to-t from-yellow-500 to-yellow-300 rounded-t animate-chart-grow" style={{height: '95%', animationDelay: '0.6s'}}></div>
+                      <div className="w-8 bg-gradient-to-t from-red-500 to-red-300 rounded-t animate-chart-grow" style={{height: '70%', animationDelay: '0.8s'}}></div>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4 flex gap-2">
+                    <div className="flex-1 h-8 bg-gradient-to-r from-green-400 to-emerald-400 rounded animate-stat-pulse flex items-center justify-center">
+                      <div className="text-xs font-bold text-white">87% Growth</div>
+                    </div>
+                    <div className="flex-1 h-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded animate-stat-pulse flex items-center justify-center" style={{animationDelay: '0.3s'}}>
+                      <div className="text-xs font-bold text-white">+$50K Salary</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <Badge className="mb-4 gradient-primary text-white px-4 py-2">
+                Career Success
+              </Badge>
+              <h2 className="text-4xl font-bold mb-6">
+                Accelerate Your Career Growth
+              </h2>
+              <p className="text-xl text-gray-600 mb-6">
+                Join thousands of professionals who have transformed their careers with our courses. Get the skills that employers are looking for.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <TrendingUp className="w-6 h-6 text-green-500" />
+                  <span>87% of students get promoted within 6 months</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Award className="w-6 h-6 text-yellow-500" />
+                  <span>Industry-recognized certificates</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Users className="w-6 h-6 text-blue-500" />
+                  <span>Career support and job placement assistance</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Courses Slider */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
@@ -264,7 +606,7 @@ const Index = () => {
                   <Card className="group overflow-hidden border-2 border-border hover:border-primary transition-all duration-300 shadow-card hover:shadow-elevated">
                     <div className="relative overflow-hidden">
                       <img
-                        src={courseImages[course.image]}
+                        src={getCourseImage(course.id, course.category)}
                         alt={course.title}
                         className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -321,8 +663,23 @@ const Index = () => {
       </section>
 
       {/* Creative Portfolio Showcase */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-white"></div>
+        <div className="absolute inset-0 opacity-5">
+          <div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url('https://images.unsplash.com/photo-1558655146-d09347e92766?w=1920&h=1080&fit=crop&auto=format&q=80')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          ></div>
+        </div>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-10 w-24 h-24 bg-gradient-to-br from-purple-200/40 to-blue-200/40 rounded-full animate-bounce" style={{animationDuration: '3s'}}></div>
+          <div className="absolute bottom-1/4 right-10 w-20 h-20 bg-gradient-to-br from-pink-200/40 to-purple-200/40 rounded-full animate-bounce" style={{animationDuration: '4s', animationDelay: '1s'}}></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -341,14 +698,22 @@ const Index = () => {
                 See the amazing work created by our students in design, digital art, and creative media courses. From concept to completion, witness the transformation of ideas into professional portfolios.
               </p>
               <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
+                <motion.div 
+                  className="text-center p-4 bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl shadow-lg"
+                  whileHover={{ scale: 1.05, rotate: 2 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
                   <div className="text-3xl font-bold text-purple-600 mb-2">500+</div>
                   <div className="text-sm text-gray-600">Projects Completed</div>
-                </div>
-                <div className="text-center">
+                </motion.div>
+                <motion.div 
+                  className="text-center p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg"
+                  whileHover={{ scale: 1.05, rotate: -2 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
                   <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
                   <div className="text-sm text-gray-600">Portfolio Success</div>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
             
@@ -358,13 +723,15 @@ const Index = () => {
               viewport={{ once: true }}
               className="order-1 lg:order-2"
             >
-              <div className="relative">
-                <img
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-500"></div>
+                <motion.img
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                   alt="AI-powered learning and student projects showcase"
-                  className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                  className="relative w-full h-auto rounded-2xl shadow-2xl"
+                  whileHover={{ scale: 1.02, rotate: 1 }}
+                  transition={{ type: "spring", stiffness: 300 }}
                 />
-
               </div>
             </motion.div>
           </div>
@@ -372,8 +739,24 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-blue-50"></div>
+        <div className="absolute inset-0 opacity-10">
+          <div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop&auto=format&q=80')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          ></div>
+        </div>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-10 w-16 h-16 bg-purple-300/30 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-12 h-12 bg-blue-300/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-pink-300/30 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
             <Badge className="mb-4 gradient-primary text-white px-4 py-2">
               Why Choose Us
@@ -409,8 +792,21 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-secondary/30"></div>
+        <div 
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&h=1080&fit=crop&auto=format&q=80')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        ></div>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-r from-purple-400/20 to-blue-400/20 rounded-full animate-spin" style={{animationDuration: '20s'}}></div>
+          <div className="absolute bottom-10 left-10 w-16 h-16 bg-gradient-to-r from-pink-400/20 to-purple-400/20 rounded-full animate-spin" style={{animationDuration: '15s', animationDirection: 'reverse'}}></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
             <Badge className="mb-4 gradient-accent text-white px-4 py-2">
               Success Stories
