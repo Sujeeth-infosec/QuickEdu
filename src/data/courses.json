@@ -1,34 +1,5 @@
 [
-  {
-    "id": "test-it-course",
-    "title": "IT Fundamentals - Payment Test Course",
-    "slug": "it-fundamentals-test",
-    "category": "IT",
-    "level": "Beginner",
-    "rating": 4.5,
-    "reviews": 1,
-    "students": 1,
-    "price": 1,
-    "originalPrice": 2,
-    "image": "course-web-dev.jpg",
-    "instructor": "Test Instructor",
-    "instructorId": "instructor-test",
-    "duration": "1 hour",
-    "lectures": 1,
-    "description": "Test course for payment gateway integration. This course is priced at ₹1 for testing payment functionality.",
-    "highlights": [
-      "Payment testing",
-      "Basic IT concepts",
-      "Quick completion"
-    ],
-    "curriculum": [
-      {
-        "section": "Test Section",
-        "lectures": 1,
-        "duration": "1h"
-      }
-    ]
-  },
+
   {
     "id": "web-dev-bootcamp",
     "title": "Complete Web Development Bootcamp",
@@ -40,7 +11,7 @@
     "students": 45678,
     "price": 42125,
     "originalPrice": 63188,
-    "image": "course-web-dev.jpg",
+    "image": "course-web-bootcamp.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "42 hours",
@@ -102,7 +73,7 @@
     "students": 32145,
     "price": 57375,
     "originalPrice": 65000,
-    "image": "course-data-science.jpg",
+    "image": "course-data-science-masterclass.jpg",
     "instructor": "Priya Sharma",
     "instructorId": "instructor-2",
     "duration": "56 hours",
@@ -164,7 +135,7 @@
     "students": 58942,
     "price": 34500,
     "originalPrice": 51750,
-    "image": "course-marketing.jpg",
+    "image": "course-digital-marketing.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "38 hours",
@@ -226,7 +197,7 @@
     "students": 38421,
     "price": 49750,
     "originalPrice": 65000,
-    "image": "course-design.jpg",
+    "image": "course-ui-ux-design.jpg",
     "instructor": "Priya Sharma",
     "instructorId": "instructor-2",
     "duration": "44 hours",
@@ -288,7 +259,7 @@
     "students": 10234,
     "price": 26875,
     "originalPrice": 40313,
-    "image": "course-web-dev.jpg",
+    "image": "course-react-nextjs.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "28 hours",
@@ -323,7 +294,7 @@
     "students": 8740,
     "price": 34500,
     "originalPrice": 51750,
-    "image": "course-web-dev.jpg",
+    "image": "course-nodejs-express.jpg",
     "instructor": "Anil Verma",
     "instructorId": "instructor-3",
     "duration": "32 hours",
@@ -358,7 +329,7 @@
     "students": 15432,
     "price": 19250,
     "originalPrice": 28875,
-    "image": "course-data-science.jpg",
+    "image": "course-pandas-analysis.jpg",
     "instructor": "Priya Sharma",
     "instructorId": "instructor-2",
     "duration": "24 hours",
@@ -393,7 +364,7 @@
     "students": 13840,
     "price": 42125,
     "originalPrice": 63188,
-    "image": "course-web-dev.jpg",
+    "image": "course-mern-stack.jpg",
     "instructor": "Lakshmi Rao",
     "instructorId": "instructor-13",
     "duration": "45 hours",
@@ -428,7 +399,7 @@
     "students": 9200,
     "price": 22300,
     "originalPrice": 33450,
-    "image": "course-data-science.jpg",
+    "image": "course-aws-fundamentals.jpg",
     "instructor": "Suresh Iyer",
     "instructorId": "instructor-12",
     "duration": "20 hours",
@@ -463,7 +434,7 @@
     "students": 6900,
     "price": 31450,
     "originalPrice": 47175,
-    "image": "course-data-science.jpg",
+    "image": "course-kotlin-android.jpg",
     "instructor": "Vikram Joshi",
     "instructorId": "instructor-5",
     "duration": "36 hours",
@@ -498,7 +469,7 @@
     "students": 8300,
     "price": 26875,
     "originalPrice": 40313,
-    "image": "course-web-dev.jpg",
+    "image": "course-flutter-mobile.jpg",
     "instructor": "Vikram Joshi",
     "instructorId": "instructor-5",
     "duration": "30 hours",
@@ -533,7 +504,7 @@
     "students": 11200,
     "price": 11625,
     "originalPrice": 17438,
-    "image": "course-marketing.jpg",
+    "image": "course-seo-content.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "18 hours",
@@ -568,7 +539,7 @@
     "students": 7200,
     "price": 34500,
     "originalPrice": 51750,
-    "image": "course-design.jpg",
+    "image": "course-ux-mobile.jpg",
     "instructor": "Meera Nair",
     "instructorId": "instructor-6",
     "duration": "28 hours",
@@ -603,7 +574,7 @@
     "students": 6100,
     "price": 22300,
     "originalPrice": 33450,
-    "image": "course-data-science.jpg",
+    "image": "course-d3-tableau.jpg",
     "instructor": "Priya Sharma",
     "instructorId": "instructor-2",
     "duration": "22 hours",
@@ -638,7 +609,7 @@
     "students": 15230,
     "price": 28400,
     "originalPrice": 42600,
-    "image": "course-data-science.jpg",
+    "image": "course-scikit-learn.jpg",
     "instructor": "Arjun Rao",
     "instructorId": "instructor-9",
     "duration": "34 hours",
@@ -673,7 +644,7 @@
     "students": 11200,
     "price": 65000,
     "originalPrice": 66000,
-    "image": "course-data-science.jpg",
+    "image": "course-tensorflow-keras.jpg",
     "instructor": "Arjun Rao",
     "instructorId": "instructor-9",
     "duration": "50 hours",
@@ -708,7 +679,7 @@
     "students": 5400,
     "price": 19250,
     "originalPrice": 28875,
-    "image": "course-web-dev.jpg",
+    "image": "course-product-management.jpg",
     "instructor": "Meera Nair",
     "instructorId": "instructor-6",
     "duration": "20 hours",
@@ -743,7 +714,7 @@
     "students": 7400,
     "price": 22300,
     "originalPrice": 33450,
-    "image": "course-web-dev.jpg",
+    "image": "course-devops-cicd.jpg",
     "instructor": "Neha Kapoor",
     "instructorId": "instructor-4",
     "duration": "18 hours",
@@ -778,7 +749,7 @@
     "students": 4300,
     "price": 11625,
     "originalPrice": 17438,
-    "image": "course-data-science.jpg",
+    "image": "course-cybersecurity-fundamentals.jpg",
     "instructor": "Prakash N",
     "instructorId": "instructor-14",
     "duration": "16 hours",
@@ -813,7 +784,7 @@
     "students": 10250,
     "price": 16200,
     "originalPrice": 24300,
-    "image": "course-data-science.jpg",
+    "image": "course-sql-database.jpg",
     "instructor": "Bhavna Iyer",
     "instructorId": "instructor-10",
     "duration": "20 hours",
@@ -848,7 +819,7 @@
     "students": 3900,
     "price": 19250,
     "originalPrice": 28875,
-    "image": "course-web-dev.jpg",
+    "image": "course-blockchain-intro.jpg",
     "instructor": "Suresh Iyer",
     "instructorId": "instructor-12",
     "duration": "18 hours",
@@ -883,7 +854,7 @@
     "students": 8200,
     "price": 8575,
     "originalPrice": 12863,
-    "image": "course-data-science.jpg",
+    "image": "course-excel-powerbi.jpg",
     "instructor": "Bhavna Iyer",
     "instructorId": "instructor-10",
     "duration": "14 hours",
@@ -918,7 +889,7 @@
     "students": 6400,
     "price": 25350,
     "originalPrice": 38025,
-    "image": "course-web-dev.jpg",
+    "image": "course-serverless-lambda.jpg",
     "instructor": "Suresh Iyer",
     "instructorId": "instructor-12",
     "duration": "22 hours",
@@ -953,7 +924,7 @@
     "students": 7600,
     "price": 14675,
     "originalPrice": 22013,
-    "image": "course-marketing.jpg",
+    "image": "course-ecommerce-shopify.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "16 hours",
@@ -988,7 +959,7 @@
     "students": 3200,
     "price": 16200,
     "originalPrice": 24300,
-    "image": "course-data-science.jpg",
+    "image": "course-salesforce-crm.jpg",
     "instructor": "Meera Nair",
     "instructorId": "instructor-6",
     "duration": "18 hours",
@@ -1023,7 +994,7 @@
     "students": 10200,
     "price": 11625,
     "originalPrice": 17438,
-    "image": "course-design.jpg",
+    "image": "course-figma-graphics.jpg",
     "instructor": "Ananya Mehta",
     "instructorId": "instructor-6",
     "duration": "20 hours",
@@ -1058,7 +1029,7 @@
     "students": 4800,
     "price": 14675,
     "originalPrice": 22013,
-    "image": "course-web-dev.jpg",
+    "image": "course-web-animation.jpg",
     "instructor": "Karan Mehta",
     "instructorId": "instructor-7",
     "duration": "18 hours",
@@ -1082,41 +1053,7 @@
       }
     ]
   },
-  {
-    "id": "course-024",
-    "title": "Rust Systems Programming Basics",
-    "slug": "rust-systems-basics",
-    "category": "Technology",
-    "level": "Advanced",
-    "rating": 4.7,
-    "reviews": 900,
-    "students": 3800,
-    "price": 34500,
-    "originalPrice": 51750,
-    "image": "course-web-dev.jpg",
-    "instructor": "Suresh Iyer",
-    "instructorId": "instructor-12",
-    "duration": "30 hours",
-    "lectures": 80,
-    "description": "Learn systems programming with Rust, memory safety and concurrency patterns.",
-    "highlights": [
-      "Ownership",
-      "Concurrency",
-      "Performance"
-    ],
-    "curriculum": [
-      {
-        "section": "Basics",
-        "lectures": 12,
-        "duration": "5h"
-      },
-      {
-        "section": "Concurrency",
-        "lectures": 10,
-        "duration": "4h"
-      }
-    ]
-  },
+
   {
     "id": "course-025",
     "title": "Sales & Growth Hacking for Startups",
@@ -1128,7 +1065,7 @@
     "students": 6200,
     "price": 19250,
     "originalPrice": 28875,
-    "image": "course-marketing.jpg",
+    "image": "course-growth-hacking.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "22 hours",
@@ -1163,7 +1100,7 @@
     "students": 4700,
     "price": 22300,
     "originalPrice": 33450,
-    "image": "course-web-dev.jpg",
+    "image": "course-graphql-apollo.jpg",
     "instructor": "Anil Verma",
     "instructorId": "instructor-3",
     "duration": "20 hours",
@@ -1198,7 +1135,7 @@
     "students": 8200,
     "price": 31450,
     "originalPrice": 47175,
-    "image": "course-data-science.jpg",
+    "image": "course-language-models.jpg",
     "instructor": "Priya Sharma",
     "instructorId": "instructor-2",
     "duration": "26 hours",
@@ -1233,7 +1170,7 @@
     "students": 3000,
     "price": 28400,
     "originalPrice": 42600,
-    "image": "course-web-dev.jpg",
+    "image": "course-nodejs-performance.jpg",
     "instructor": "Anil Verma",
     "instructorId": "instructor-3",
     "duration": "18 hours",
@@ -1268,7 +1205,7 @@
     "students": 20200,
     "price": 34500,
     "originalPrice": 51750,
-    "image": "course-web-dev.jpg",
+    "image": "course-interview-prep.jpg",
     "instructor": "Lakshmi Rao",
     "instructorId": "instructor-13",
     "duration": "60 hours",
@@ -1303,7 +1240,7 @@
     "students": 4500,
     "price": 10100,
     "originalPrice": 15150,
-    "image": "course-marketing.jpg",
+    "image": "course-google-analytics.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "14 hours",
@@ -1338,7 +1275,7 @@
     "students": 2700,
     "price": 8575,
     "originalPrice": 12863,
-    "image": "course-web-dev.jpg",
+    "image": "course-wordpress-development.jpg",
     "instructor": "Lakshmi Rao",
     "instructorId": "instructor-13",
     "duration": "16 hours",
@@ -1373,7 +1310,7 @@
     "students": 4900,
     "price": 28400,
     "originalPrice": 42600,
-    "image": "course-data-science.jpg",
+    "image": "course-cloud-security.jpg",
     "instructor": "Prakash N",
     "instructorId": "instructor-14",
     "duration": "22 hours",
@@ -1408,7 +1345,7 @@
     "students": 3200,
     "price": 7050,
     "originalPrice": 10575,
-    "image": "course-web-dev.jpg",
+    "image": "course-bash-powershell.jpg",
     "instructor": "Neha Kapoor",
     "instructorId": "instructor-4",
     "duration": "12 hours",
@@ -1443,7 +1380,7 @@
     "students": 2100,
     "price": 4000,
     "originalPrice": 6000,
-    "image": "course-marketing.jpg",
+    "image": "course-nocode-automation.jpg",
     "instructor": "Meera Nair",
     "instructorId": "instructor-6",
     "duration": "8 hours",
@@ -1478,7 +1415,7 @@
     "students": 4100,
     "price": 10100,
     "originalPrice": 15150,
-    "image": "course-design.jpg",
+    "image": "course-accessibility-a11y.jpg",
     "instructor": "Anil Verma",
     "instructorId": "instructor-3",
     "duration": "14 hours",
@@ -1513,7 +1450,7 @@
     "students": 5400,
     "price": 11625,
     "originalPrice": 17438,
-    "image": "course-web-dev.jpg",
+    "image": "course-firebase-realtime.jpg",
     "instructor": "Vikram Joshi",
     "instructorId": "instructor-5",
     "duration": "16 hours",
@@ -1548,7 +1485,7 @@
     "students": 7200,
     "price": 20775,
     "originalPrice": 31163,
-    "image": "course-web-dev.jpg",
+    "image": "course-testing-jest-cypress.jpg",
     "instructor": "Karan Mehta",
     "instructorId": "instructor-7",
     "duration": "20 hours",
@@ -1583,7 +1520,7 @@
     "students": 2800,
     "price": 8575,
     "originalPrice": 12863,
-    "image": "course-data-science.jpg",
+    "image": "course-sqlalchemy-orm.jpg",
     "instructor": "Bhavna Iyer",
     "instructorId": "instructor-10",
     "duration": "12 hours",
@@ -1618,7 +1555,7 @@
     "students": 2100,
     "price": 8575,
     "originalPrice": 12863,
-    "image": "course-data-science.jpg",
+    "image": "course-data-privacy.jpg",
     "instructor": "Prakash N",
     "instructorId": "instructor-14",
     "duration": "10 hours",
@@ -1653,7 +1590,7 @@
     "students": 3800,
     "price": 19250,
     "originalPrice": 28875,
-    "image": "course-marketing.jpg",
+    "image": "course-saas-metrics.jpg",
     "instructor": "Meera Nair",
     "instructorId": "instructor-6",
     "duration": "18 hours",
@@ -1688,7 +1625,7 @@
     "students": 9400,
     "price": 31450,
     "originalPrice": 47175,
-    "image": "course-web-dev.jpg",
+    "image": "course-kubernetes-intro.jpg",
     "instructor": "Neha Kapoor",
     "instructorId": "instructor-4",
     "duration": "30 hours",
@@ -1723,7 +1660,7 @@
     "students": 13200,
     "price": 19250,
     "originalPrice": 28875,
-    "image": "course-web-dev.jpg",
+    "image": "course-frontend-career.jpg",
     "instructor": "Lakshmi Rao",
     "instructorId": "instructor-13",
     "duration": "40 hours",
@@ -1758,7 +1695,7 @@
     "students": 7000,
     "price": 26875,
     "originalPrice": 40313,
-    "image": "course-web-dev.jpg",
+    "image": "course-react-native.jpg",
     "instructor": "Vikram Joshi",
     "instructorId": "instructor-5",
     "duration": "28 hours",
@@ -1793,7 +1730,7 @@
     "students": 5200,
     "price": 25350,
     "originalPrice": 38025,
-    "image": "course-data-science.jpg",
+    "image": "course-airflow-engineering.jpg",
     "instructor": "Bhavna Iyer",
     "instructorId": "instructor-10",
     "duration": "26 hours",
@@ -1828,7 +1765,7 @@
     "students": 4300,
     "price": 8575,
     "originalPrice": 12863,
-    "image": "course-marketing.jpg",
+    "image": "course-copywriting.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "14 hours",
@@ -1863,7 +1800,7 @@
     "students": 5400,
     "price": 25350,
     "originalPrice": 38025,
-    "image": "course-data-science.jpg",
+    "image": "course-opencv-vision.jpg",
     "instructor": "Arjun Rao",
     "instructorId": "instructor-9",
     "duration": "24 hours",
@@ -1898,7 +1835,7 @@
     "students": 3000,
     "price": 7050,
     "originalPrice": 10575,
-    "image": "course-design.jpg",
+    "image": "course-customer-interviews.jpg",
     "instructor": "Rhea Das",
     "instructorId": "instructor-11",
     "duration": "10 hours",
@@ -1933,7 +1870,7 @@
     "students": 8200,
     "price": 11625,
     "originalPrice": 17438,
-    "image": "course-web-dev.jpg",
+    "image": "course-docker-containers.jpg",
     "instructor": "Neha Kapoor",
     "instructorId": "instructor-4",
     "duration": "16 hours",
@@ -1968,7 +1905,7 @@
     "students": 4700,
     "price": 4000,
     "originalPrice": 6000,
-    "image": "course-data-science.jpg",
+    "image": "course-advanced-excel.jpg",
     "instructor": "Bhavna Iyer",
     "instructorId": "instructor-10",
     "duration": "12 hours",
@@ -2003,7 +1940,7 @@
     "students": 4200,
     "price": 8575,
     "originalPrice": 12863,
-    "image": "course-marketing.jpg",
+    "image": "course-influencer-marketing.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "14 hours",
@@ -2038,7 +1975,7 @@
     "students": 3800,
     "price": 7050,
     "originalPrice": 10575,
-    "image": "course-data-science.jpg",
+    "image": "course-python-automation.jpg",
     "instructor": "Bhavna Iyer",
     "instructorId": "instructor-10",
     "duration": "12 hours",
@@ -2073,7 +2010,7 @@
     "students": 6200,
     "price": 19250,
     "originalPrice": 28875,
-    "image": "course-web-dev.jpg",
+    "image": "course-react-hooks.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "18 hours",
@@ -2108,7 +2045,7 @@
     "students": 3000,
     "price": 8575,
     "originalPrice": 12863,
-    "image": "course-web-dev.jpg",
+    "image": "course-css-layouts.jpg",
     "instructor": "Karan Mehta",
     "instructorId": "instructor-7",
     "duration": "14 hours",
@@ -2143,7 +2080,7 @@
     "students": 3400,
     "price": 26875,
     "originalPrice": 40313,
-    "image": "course-data-science.jpg",
+    "image": "course-kafka.jpg",
     "instructor": "Bhavna Iyer",
     "instructorId": "instructor-10",
     "duration": "20 hours",
@@ -2178,7 +2115,7 @@
     "students": 2200,
     "price": 4000,
     "originalPrice": 6000,
-    "image": "course-marketing.jpg",
+    "image": "course-email-marketing.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "8 hours",
@@ -2213,7 +2150,7 @@
     "students": 2100,
     "price": 16200,
     "originalPrice": 24300,
-    "image": "course-data-science.jpg",
+    "image": "course-cloud-optimization.jpg",
     "instructor": "Suresh Iyer",
     "instructorId": "instructor-12",
     "duration": "12 hours",
@@ -2248,7 +2185,7 @@
     "students": 3600,
     "price": 22300,
     "originalPrice": 33450,
-    "image": "course-web-dev.jpg",
+    "image": "course-angular.jpg",
     "instructor": "Lakshmi Rao",
     "instructorId": "instructor-13",
     "duration": "26 hours",
@@ -2283,7 +2220,7 @@
     "students": 4100,
     "price": 13150,
     "originalPrice": 19725,
-    "image": "course-marketing.jpg",
+    "image": "course-ecommerce-funnel.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "16 hours",
@@ -2318,7 +2255,7 @@
     "students": 7600,
     "price": 10100,
     "originalPrice": 15150,
-    "image": "course-web-dev.jpg",
+    "image": "course-typescript.jpg",
     "instructor": "Rajesh Kumar",
     "instructorId": "instructor-1",
     "duration": "14 hours",
@@ -2353,7 +2290,7 @@
     "students": 2400,
     "price": 7050,
     "originalPrice": 10575,
-    "image": "course-web-dev.jpg",
+    "image": "course-flask-api.jpg",
     "instructor": "Sakshi Gupta",
     "instructorId": "instructor-8",
     "duration": "12 hours",
@@ -2388,7 +2325,7 @@
     "students": 3300,
     "price": 4000,
     "originalPrice": 6000,
-    "image": "course-design.jpg",
+    "image": "course-portfolio.jpg",
     "instructor": "Lakshmi Rao",
     "instructorId": "instructor-13",
     "duration": "10 hours",
@@ -2423,7 +2360,7 @@
     "students": 3600,
     "price": 20775,
     "originalPrice": 31163,
-    "image": "course-data-science.jpg",
+    "image": "course-sql-tuning.jpg",
     "instructor": "Bhavna Iyer",
     "instructorId": "instructor-10",
     "duration": "18 hours",
@@ -2458,7 +2395,7 @@
     "students": 2700,
     "price": 7050,
     "originalPrice": 10575,
-    "image": "course-web-dev.jpg",
+    "image": "course-redis.jpg",
     "instructor": "Bhavna Iyer",
     "instructorId": "instructor-10",
     "duration": "10 hours",
@@ -2493,7 +2430,7 @@
     "students": 2300,
     "price": 7050,
     "originalPrice": 10575,
-    "image": "course-design.jpg",
+    "image": "course-design-thinking.jpg",
     "instructor": "Rhea Das",
     "instructorId": "instructor-11",
     "duration": "12 hours",
@@ -2528,7 +2465,7 @@
     "students": 3400,
     "price": 31450,
     "originalPrice": 47175,
-    "image": "course-web-dev.jpg",
+    "image": "course-golang-backend.jpg",
     "instructor": "Suresh Iyer",
     "instructorId": "instructor-12",
     "duration": "28 hours",
@@ -2563,7 +2500,7 @@
     "students": 1900,
     "price": 11625,
     "originalPrice": 17438,
-    "image": "course-data-science.jpg",
+    "image": "course-ai-business.jpg",
     "instructor": "Priya Sharma",
     "instructorId": "instructor-2",
     "duration": "8 hours",
@@ -2598,7 +2535,7 @@
     "students": 2100,
     "price": 13150,
     "originalPrice": 19725,
-    "image": "course-data-science.jpg",
+    "image": "course-mixpanel-analytics.jpg",
     "instructor": "Meera Nair",
     "instructorId": "instructor-6",
     "duration": "14 hours",
@@ -2633,7 +2570,7 @@
     "students": 1500,
     "price": 7050,
     "originalPrice": 10575,
-    "image": "course-marketing.jpg",
+    "image": "course-mobile-monetization.jpg",
     "instructor": "Vikram Joshi",
     "instructorId": "instructor-5",
     "duration": "10 hours",
@@ -2668,7 +2605,7 @@
     "students": 2900,
     "price": 19250,
     "originalPrice": 28875,
-    "image": "course-web-dev.jpg",
+    "image": "course-prometheus-grafana.jpg",
     "instructor": "Neha Kapoor",
     "instructorId": "instructor-4",
     "duration": "16 hours",
@@ -2703,7 +2640,7 @@
     "students": 1900,
     "price": 4000,
     "originalPrice": 6000,
-    "image": "course-design.jpg",
+    "image": "course-localization-i18n.jpg",
     "instructor": "Ananya Mehta",
     "instructorId": "instructor-6",
     "duration": "8 hours",
@@ -2724,6 +2661,617 @@
         "section": "Tools",
         "lectures": 6,
         "duration": "2h"
+      }
+    ]
+  },
+  {
+    "id": "course-071",
+    "title": "Data Analytics with AI & Machine Learning",
+    "slug": "data-analytics-ai-ml",
+    "category": "Data Science",
+    "level": "Advanced",
+    "rating": 4.9,
+    "reviews": 2840,
+    "students": 12500,
+    "price": 65000,
+    "originalPrice": 85000,
+    "image": "course-ai-analytics.jpg",
+    "instructor": "Dr. Arjun Rao",
+    "instructorId": "instructor-9",
+    "duration": "60 hours",
+    "lectures": 180,
+    "description": "Master advanced data analytics using AI/ML techniques, predictive modeling, and automated insights generation for enterprise-level decision making.",
+    "highlights": [
+      "Predictive Analytics",
+      "AutoML Pipelines",
+      "Real-time Analytics",
+      "AI-driven Insights",
+      "Enterprise Deployment"
+    ],
+    "curriculum": [
+      {
+        "section": "Advanced Analytics Foundations",
+        "lectures": 25,
+        "duration": "10h"
+      },
+      {
+        "section": "Machine Learning for Analytics",
+        "lectures": 35,
+        "duration": "15h"
+      },
+      {
+        "section": "AI-Powered Insights",
+        "lectures": 30,
+        "duration": "12h"
+      },
+      {
+        "section": "Enterprise Implementation",
+        "lectures": 25,
+        "duration": "10h"
+      }
+    ]
+  },
+  {
+    "id": "course-072",
+    "title": "Ethical Hacking & Penetration Testing",
+    "slug": "ethical-hacking-pentesting",
+    "category": "Cybersecurity",
+    "level": "Advanced",
+    "rating": 4.8,
+    "reviews": 1950,
+    "students": 8200,
+    "price": 75000,
+    "originalPrice": 95000,
+    "image": "course-ethical-hacking.jpg",
+    "instructor": "Prakash N",
+    "instructorId": "instructor-14",
+    "duration": "80 hours",
+    "lectures": 220,
+    "description": "Comprehensive ethical hacking course covering penetration testing methodologies, vulnerability assessment, and advanced security testing techniques.",
+    "highlights": [
+      "Penetration Testing",
+      "Vulnerability Assessment",
+      "Network Security",
+      "Web Application Testing",
+      "Reporting & Documentation"
+    ],
+    "curriculum": [
+      {
+        "section": "Ethical Hacking Fundamentals",
+        "lectures": 30,
+        "duration": "12h"
+      },
+      {
+        "section": "Network Penetration Testing",
+        "lectures": 45,
+        "duration": "18h"
+      },
+      {
+        "section": "Web Application Security",
+        "lectures": 40,
+        "duration": "16h"
+      },
+      {
+        "section": "Advanced Exploitation",
+        "lectures": 35,
+        "duration": "14h"
+      }
+    ]
+  },
+  {
+    "id": "course-073",
+    "title": "Advanced Cybersecurity & Threat Intelligence",
+    "slug": "advanced-cybersecurity-threat-intel",
+    "category": "Cybersecurity",
+    "level": "Advanced",
+    "rating": 4.8,
+    "reviews": 1640,
+    "students": 7100,
+    "price": 68000,
+    "originalPrice": 88000,
+    "image": "course-cybersecurity.jpg",
+    "instructor": "Prakash N",
+    "instructorId": "instructor-14",
+    "duration": "70 hours",
+    "lectures": 200,
+    "description": "Advanced cybersecurity strategies, threat hunting, incident response, and building enterprise-grade security operations centers (SOC).",
+    "highlights": [
+      "Threat Intelligence",
+      "SOC Operations",
+      "Incident Response",
+      "Malware Analysis",
+      "Security Automation"
+    ],
+    "curriculum": [
+      {
+        "section": "Advanced Threat Landscape",
+        "lectures": 25,
+        "duration": "10h"
+      },
+      {
+        "section": "SOC & Threat Hunting",
+        "lectures": 40,
+        "duration": "16h"
+      },
+      {
+        "section": "Incident Response",
+        "lectures": 35,
+        "duration": "14h"
+      },
+      {
+        "section": "Security Automation",
+        "lectures": 30,
+        "duration": "12h"
+      }
+    ]
+  },
+  {
+    "id": "course-074",
+    "title": "AWS Cloud Solutions Architect Professional",
+    "slug": "aws-solutions-architect-pro",
+    "category": "Cloud Computing",
+    "level": "Advanced",
+    "rating": 4.9,
+    "reviews": 3200,
+    "students": 15800,
+    "price": 85000,
+    "originalPrice": 110000,
+    "image": "course-aws-cloud.jpg",
+    "instructor": "Suresh Iyer",
+    "instructorId": "instructor-12",
+    "duration": "90 hours",
+    "lectures": 250,
+    "description": "Master AWS cloud architecture, design scalable solutions, and prepare for AWS Solutions Architect Professional certification with hands-on projects.",
+    "highlights": [
+      "Advanced AWS Services",
+      "Multi-Region Architecture",
+      "Cost Optimization",
+      "Security Best Practices",
+      "Certification Prep"
+    ],
+    "curriculum": [
+      {
+        "section": "Advanced AWS Architecture",
+        "lectures": 40,
+        "duration": "16h"
+      },
+      {
+        "section": "Enterprise Solutions",
+        "lectures": 50,
+        "duration": "20h"
+      },
+      {
+        "section": "Security & Compliance",
+        "lectures": 35,
+        "duration": "14h"
+      },
+      {
+        "section": "Certification Practice",
+        "lectures": 40,
+        "duration": "16h"
+      }
+    ]
+  },
+  {
+    "id": "course-075",
+    "title": "Microsoft Azure Cloud Expert",
+    "slug": "azure-cloud-expert",
+    "category": "Cloud Computing",
+    "level": "Advanced",
+    "rating": 4.8,
+    "reviews": 2650,
+    "students": 11200,
+    "price": 78000,
+    "originalPrice": 98000,
+    "image": "course-azure-cloud.jpg",
+    "instructor": "Neha Kapoor",
+    "instructorId": "instructor-4",
+    "duration": "85 hours",
+    "lectures": 230,
+    "description": "Comprehensive Azure cloud mastery including DevOps, AI services, and enterprise-grade solutions with certification preparation.",
+    "highlights": [
+      "Azure DevOps",
+      "AI & Cognitive Services",
+      "Enterprise Integration",
+      "Hybrid Cloud Solutions",
+      "Azure Certification"
+    ],
+    "curriculum": [
+      {
+        "section": "Azure Fundamentals to Advanced",
+        "lectures": 35,
+        "duration": "14h"
+      },
+      {
+        "section": "DevOps & Automation",
+        "lectures": 45,
+        "duration": "18h"
+      },
+      {
+        "section": "AI & Machine Learning Services",
+        "lectures": 40,
+        "duration": "16h"
+      },
+      {
+        "section": "Enterprise Solutions",
+        "lectures": 35,
+        "duration": "14h"
+      }
+    ]
+  },
+  {
+    "id": "course-076",
+    "title": "Advanced DevOps & Cloud Security",
+    "slug": "advanced-devops-cloud-security",
+    "category": "DevOps",
+    "level": "Advanced",
+    "rating": 4.7,
+    "reviews": 1850,
+    "students": 8900,
+    "price": 72000,
+    "originalPrice": 92000,
+    "image": "course-devops-security.jpg",
+    "instructor": "Neha Kapoor",
+    "instructorId": "instructor-4",
+    "duration": "75 hours",
+    "lectures": 210,
+    "description": "Master DevSecOps practices, infrastructure as code, container security, and automated compliance in cloud environments.",
+    "highlights": [
+      "DevSecOps Pipeline",
+      "Infrastructure as Code",
+      "Container Security",
+      "Compliance Automation",
+      "Zero Trust Architecture"
+    ],
+    "curriculum": [
+      {
+        "section": "DevSecOps Fundamentals",
+        "lectures": 30,
+        "duration": "12h"
+      },
+      {
+        "section": "Secure CI/CD Pipelines",
+        "lectures": 40,
+        "duration": "16h"
+      },
+      {
+        "section": "Cloud Security Automation",
+        "lectures": 35,
+        "duration": "14h"
+      },
+      {
+        "section": "Compliance & Monitoring",
+        "lectures": 30,
+        "duration": "12h"
+      }
+    ]
+  },
+  {
+    "id": "course-077",
+    "title": "Blockchain Development & Smart Contracts",
+    "slug": "blockchain-smart-contracts-advanced",
+    "category": "Blockchain",
+    "level": "Advanced",
+    "rating": 4.6,
+    "reviews": 1420,
+    "students": 6800,
+    "price": 58000,
+    "originalPrice": 78000,
+    "image": "course-blockchain.jpg",
+    "instructor": "Suresh Iyer",
+    "instructorId": "instructor-12",
+    "duration": "65 hours",
+    "lectures": 180,
+    "description": "Advanced blockchain development, smart contract security, DeFi protocols, and building decentralized applications on multiple chains.",
+    "highlights": [
+      "Smart Contract Development",
+      "DeFi Protocols",
+      "Multi-chain Development",
+      "Security Auditing",
+      "dApp Architecture"
+    ],
+    "curriculum": [
+      {
+        "section": "Advanced Solidity",
+        "lectures": 25,
+        "duration": "10h"
+      },
+      {
+        "section": "DeFi Development",
+        "lectures": 35,
+        "duration": "14h"
+      },
+      {
+        "section": "Security & Auditing",
+        "lectures": 30,
+        "duration": "12h"
+      },
+      {
+        "section": "Multi-chain Solutions",
+        "lectures": 25,
+        "duration": "10h"
+      }
+    ]
+  },
+  {
+    "id": "course-078",
+    "title": "Quantum Computing Fundamentals",
+    "slug": "quantum-computing-fundamentals",
+    "category": "Emerging Technology",
+    "level": "Advanced",
+    "rating": 4.7,
+    "reviews": 980,
+    "students": 4200,
+    "price": 48000,
+    "originalPrice": 68000,
+    "image": "course-quantum.jpg",
+    "instructor": "Dr. Arjun Rao",
+    "instructorId": "instructor-9",
+    "duration": "50 hours",
+    "lectures": 140,
+    "description": "Introduction to quantum computing principles, quantum algorithms, and practical applications using IBM Qiskit and quantum simulators.",
+    "highlights": [
+      "Quantum Mechanics Basics",
+      "Quantum Algorithms",
+      "Qiskit Programming",
+      "Quantum Cryptography",
+      "Future Applications"
+    ],
+    "curriculum": [
+      {
+        "section": "Quantum Theory",
+        "lectures": 20,
+        "duration": "8h"
+      },
+      {
+        "section": "Quantum Programming",
+        "lectures": 30,
+        "duration": "12h"
+      },
+      {
+        "section": "Quantum Algorithms",
+        "lectures": 25,
+        "duration": "10h"
+      },
+      {
+        "section": "Practical Applications",
+        "lectures": 20,
+        "duration": "8h"
+      }
+    ]
+  },
+  {
+    "id": "course-079",
+    "title": "Complete AI & Machine Learning Bootcamp",
+    "slug": "complete-aiml-bootcamp",
+    "category": "Artificial Intelligence",
+    "level": "Intermediate",
+    "rating": 4.9,
+    "reviews": 4200,
+    "students": 18500,
+    "price": 55000,
+    "originalPrice": 75000,
+    "image": "course-aiml-bootcamp.jpg",
+    "instructor": "Dr. Priya Sharma",
+    "instructorId": "instructor-2",
+    "duration": "120 hours",
+    "lectures": 300,
+    "description": "Comprehensive AI/ML bootcamp covering supervised learning, deep learning, NLP, computer vision, and real-world project implementation.",
+    "highlights": [
+      "Supervised & Unsupervised Learning",
+      "Deep Learning with TensorFlow",
+      "Natural Language Processing",
+      "Computer Vision",
+      "MLOps & Deployment"
+    ],
+    "curriculum": [
+      {
+        "section": "Machine Learning Fundamentals",
+        "lectures": 50,
+        "duration": "20h"
+      },
+      {
+        "section": "Deep Learning & Neural Networks",
+        "lectures": 60,
+        "duration": "24h"
+      },
+      {
+        "section": "NLP & Computer Vision",
+        "lectures": 70,
+        "duration": "28h"
+      },
+      {
+        "section": "MLOps & Production",
+        "lectures": 40,
+        "duration": "16h"
+      }
+    ]
+  },
+  {
+    "id": "course-080",
+    "title": "Advanced SQL & Database Management",
+    "slug": "advanced-sql-database",
+    "category": "Database",
+    "level": "Advanced",
+    "rating": 4.7,
+    "reviews": 2400,
+    "students": 11800,
+    "price": 35000,
+    "originalPrice": 48000,
+    "image": "course-advanced-sql.jpg",
+    "instructor": "Bhavna Iyer",
+    "instructorId": "instructor-10",
+    "duration": "65 hours",
+    "lectures": 180,
+    "description": "Master advanced SQL techniques, database optimization, stored procedures, and enterprise database management across multiple platforms.",
+    "highlights": [
+      "Advanced SQL Queries",
+      "Database Performance Tuning",
+      "Stored Procedures & Functions",
+      "Data Warehousing",
+      "Multi-Database Platforms"
+    ],
+    "curriculum": [
+      {
+        "section": "Advanced SQL Techniques",
+        "lectures": 45,
+        "duration": "18h"
+      },
+      {
+        "section": "Performance Optimization",
+        "lectures": 40,
+        "duration": "16h"
+      },
+      {
+        "section": "Database Administration",
+        "lectures": 35,
+        "duration": "14h"
+      },
+      {
+        "section": "Enterprise Solutions",
+        "lectures": 30,
+        "duration": "12h"
+      }
+    ]
+  },
+  {
+    "id": "course-081",
+    "title": "Machine Learning Engineering",
+    "slug": "machine-learning-engineering",
+    "category": "Machine Learning",
+    "level": "Advanced",
+    "rating": 4.9,
+    "reviews": 3200,
+    "students": 14500,
+    "price": 62000,
+    "originalPrice": 82000,
+    "image": "course-ml-engineering.jpg",
+    "instructor": "Dr. Arjun Rao",
+    "instructorId": "instructor-9",
+    "duration": "100 hours",
+    "lectures": 260,
+    "description": "Production-ready machine learning systems, MLOps, model deployment, monitoring, and scaling ML applications in enterprise environments.",
+    "highlights": [
+      "MLOps Pipeline Development",
+      "Model Deployment & Scaling",
+      "ML System Design",
+      "Model Monitoring & Maintenance",
+      "Enterprise ML Architecture"
+    ],
+    "curriculum": [
+      {
+        "section": "ML System Architecture",
+        "lectures": 40,
+        "duration": "16h"
+      },
+      {
+        "section": "MLOps & CI/CD",
+        "lectures": 50,
+        "duration": "20h"
+      },
+      {
+        "section": "Model Deployment",
+        "lectures": 45,
+        "duration": "18h"
+      },
+      {
+        "section": "Monitoring & Optimization",
+        "lectures": 40,
+        "duration": "16h"
+      }
+    ]
+  },
+  {
+    "id": "course-082",
+    "title": "Cybersecurity Specialist Certification",
+    "slug": "cybersecurity-specialist-cert",
+    "category": "Cybersecurity",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "reviews": 2800,
+    "students": 12400,
+    "price": 48000,
+    "originalPrice": 65000,
+    "image": "course-cyber-specialist.jpg",
+    "instructor": "Prakash N",
+    "instructorId": "instructor-14",
+    "duration": "95 hours",
+    "lectures": 240,
+    "description": "Complete cybersecurity training covering network security, risk management, compliance, and hands-on security tools and techniques.",
+    "highlights": [
+      "Network Security Fundamentals",
+      "Risk Assessment & Management",
+      "Security Tools & Technologies",
+      "Compliance & Governance",
+      "Incident Response"
+    ],
+    "curriculum": [
+      {
+        "section": "Security Fundamentals",
+        "lectures": 40,
+        "duration": "16h"
+      },
+      {
+        "section": "Network & System Security",
+        "lectures": 60,
+        "duration": "24h"
+      },
+      {
+        "section": "Risk Management",
+        "lectures": 45,
+        "duration": "18h"
+      },
+      {
+        "section": "Advanced Security Operations",
+        "lectures": 50,
+        "duration": "20h"
+      }
+    ]
+  },
+  {
+    "id": "course-083",
+    "title": "Data Science with Python & R",
+    "slug": "data-science-python-r",
+    "category": "Data Science",
+    "level": "Intermediate",
+    "rating": 4.8,
+    "reviews": 3600,
+    "students": 16200,
+    "price": 42000,
+    "originalPrice": 58000,
+    "image": "course-data-science-python.jpg",
+    "instructor": "Dr. Arjun Rao",
+    "instructorId": "instructor-9",
+    "duration": "85 hours",
+    "lectures": 220,
+    "description": "Master data science using Python and R for statistical analysis, data visualization, machine learning, and big data processing.",
+    "highlights": [
+      "Python for Data Science",
+      "R Programming & Statistics",
+      "Data Visualization",
+      "Statistical Modeling",
+      "Big Data Analytics"
+    ],
+    "curriculum": [
+      {
+        "section": "Python Data Science Stack",
+        "lectures": 55,
+        "duration": "22h"
+      },
+      {
+        "section": "R Programming & Statistics",
+        "lectures": 50,
+        "duration": "20h"
+      },
+      {
+        "section": "Advanced Analytics",
+        "lectures": 45,
+        "duration": "18h"
+      },
+      {
+        "section": "Big Data & Deployment",
+        "lectures": 35,
+        "duration": "14h"
       }
     ]
   }

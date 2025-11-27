@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getCurrentUser, logout, isAuthenticated } from "@/lib/auth";
 import { useNavigate } from "react-router-dom";
+import QuickEduLogo from "@/assets/Quickedulogo-01.png";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,16 +54,11 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 rounded-xl flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
-                  <div className="w-5 h-5 bg-white rounded-sm flex items-center justify-center">
-                    <div className="w-3 h-3 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-sm"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full animate-pulse"></div>
-            </div>
+            <img 
+              src={QuickEduLogo} 
+              alt="QuickEdu Logo" 
+              className="w-12 h-12 rounded-xl object-cover shadow-lg transition-all duration-300 group-hover:scale-110"
+            />
             <div className="flex flex-col">
               <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">QuickEdu</span>
               <span className="text-xs text-gray-500 font-medium tracking-wider">LEARN • GROW • SUCCEED</span>

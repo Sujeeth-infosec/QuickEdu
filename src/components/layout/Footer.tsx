@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { BookOpen, Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import QuickEduLogo from "@/assets/Quickedulogo-01.png";
 
 export const Footer = () => {
   const footerLinks = {
@@ -7,13 +8,11 @@ export const Footer = () => {
       { label: "Courses", to: "/courses" },
       { label: "Instructors", to: "/instructors" },
       { label: "About Us", to: "/about" },
-      { label: "Pricing", to: "/pricing" },
     ],
     support: [
-      { label: "Help Center", to: "#" },
       { label: "Terms of Service", to: "/terms" },
       { label: "Privacy Policy", to: "/privacy" },
-      { label: "Contact Us", to: "#" },
+      { label: "Contact Us", to: "/contact" },
     ],
   };
 
@@ -31,9 +30,11 @@ export const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
-                <BookOpen className="w-6 h-6 text-primary-foreground" />
-              </div>
+              <img 
+                src={QuickEduLogo} 
+                alt="QuickEdu Logo" 
+                className="w-10 h-10 rounded-lg object-cover"
+              />
               <span className="text-2xl font-bold text-gradient">QuickEdu</span>
             </Link>
             <p className="text-muted-foreground mb-4">

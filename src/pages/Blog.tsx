@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 const Blog = () => {
   const [newsArticles, setNewsArticles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [activeCategory, setActiveCategory] = useState("All");
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -52,6 +53,39 @@ const Blog = () => {
             date: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
             readTime: '3 min read',
             image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            isExternal: true
+          },
+          {
+            id: 'news-4',
+            title: 'EdTech Startups Raise $2.8 Billion in Q1 2024 Funding',
+            excerpt: 'Venture capital investment in education technology reaches new heights with focus on personalized learning and skill-based training platforms.',
+            category: 'News',
+            author: 'EdTech Insider',
+            date: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+            readTime: '6 min read',
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            isExternal: true
+          },
+          {
+            id: 'news-5',
+            title: 'Virtual Reality Classrooms Show 60% Improvement in Student Engagement',
+            excerpt: 'Latest study from MIT reveals significant benefits of immersive learning environments in STEM education and language learning programs.',
+            category: 'News',
+            author: 'MIT Education Lab',
+            date: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+            readTime: '7 min read',
+            image: 'https://images.unsplash.com/photo-1592478411213-6153e4ebc696?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            isExternal: true
+          },
+          {
+            id: 'news-6',
+            title: 'Government Launches $500M Initiative for Digital Skills Training',
+            excerpt: 'New federal program aims to upskill 2 million workers in emerging technologies including AI, cybersecurity, and cloud computing by 2025.',
+            category: 'News',
+            author: 'Policy Education News',
+            date: new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+            readTime: '5 min read',
+            image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             isExternal: true
           }
         ];
@@ -129,11 +163,32 @@ const Blog = () => {
       date: "2024-01-03",
       readTime: "10 min read",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 7,
+      title: "Gamification in Education: Research Shows 45% Increase in Course Completion",
+      excerpt: "Comprehensive study analyzing 10,000+ students reveals how game mechanics improve learning outcomes and student retention rates.",
+      category: "Research",
+      author: "Dr. Lisa Chen",
+      date: "2024-01-01",
+      readTime: "8 min read",
+      image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      id: 8,
+      title: "Blockchain Certificates Gain Recognition from Major Universities",
+      excerpt: "Harvard, MIT, and Stanford announce acceptance of blockchain-verified credentials, marking a shift toward decentralized education verification.",
+      category: "News",
+      author: "Higher Ed Today",
+      date: "2023-12-28",
+      readTime: "6 min read",
+      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ];
 
   const categories = ["All", "News", "Research"];
   const allPosts = [...blogPosts, ...newsArticles];
+  const filteredPosts = activeCategory === "All" ? allPosts : allPosts.filter(post => post.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50">
@@ -162,10 +217,10 @@ const Blog = () => {
               Education Blog
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
-              Latest News & Research
+              News and Research
             </h1>
             <p className="text-xl text-gray-200 mb-8 drop-shadow-md">
-              Stay updated with the latest trends, research, and insights in online education
+              Stay updated with the latest educational news, breakthrough research, and industry insights
             </p>
             <div className="flex items-center justify-center gap-8 text-white/80">
               <div className="flex items-center gap-2">
@@ -190,8 +245,9 @@ const Blog = () => {
               {categories.map((category) => (
                 <Badge
                   key={category}
-                  variant={category === "All" ? "default" : "outline"}
+                  variant={category === activeCategory ? "default" : "outline"}
                   className="px-6 py-2 cursor-pointer hover:bg-primary hover:text-white transition-colors"
+                  onClick={() => setActiveCategory(category)}
                 >
                   {category}
                 </Badge>
@@ -209,7 +265,7 @@ const Blog = () => {
 
           {/* Blog Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {!loading && allPosts.map((post, index) => (
+            {!loading && filteredPosts.map((post, index) => (
               <motion.div
                 key={post.id}
                 initial={{ opacity: 0, y: 30 }}

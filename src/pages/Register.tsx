@@ -8,6 +8,9 @@ import { Card } from "@/components/ui/card";
 import { BookOpen, Mail, Lock, User, Loader2 } from "lucide-react";
 import { register } from "@/lib/auth";
 import { toast } from "sonner";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import QuickEduLogo from "@/assets/Quickedulogo-01.png";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -56,7 +59,9 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+    <>
+      <Navbar />
+      <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-indigo-50 pt-20">
       {/* Animated Geometric Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div 
@@ -97,9 +102,11 @@ const Register = () => {
       >
         {/* Logo */}
           <Link to="/" className="flex items-center justify-center gap-2 mb-8">
-          <div className="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center shadow-glow">
-            <BookOpen className="w-7 h-7 text-primary-foreground" />
-          </div>
+          <img 
+            src={QuickEduLogo} 
+            alt="QuickEdu Logo" 
+            className="w-12 h-12 rounded-lg object-cover shadow-lg"
+          />
           <span className="text-3xl font-bold text-gradient">QuickEdu</span>
         </Link>
 
@@ -208,6 +215,8 @@ const Register = () => {
         </Card>
       </motion.div>
     </div>
+    <Footer />
+    </>
   );
 };
 

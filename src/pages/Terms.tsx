@@ -7,11 +7,22 @@ const Terms = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      <div className="pt-32 pb-16">
+      {/* Header Section */}
+      <section className="pt-32 pb-16 bg-gradient-dark">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-5xl font-bold mb-4">Terms of Service</h1>
+            <p className="text-xl text-muted-foreground">
+              Please read these terms carefully before using our platform
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
           
-          <Card className="p-8">
+          <Card className="p-8 shadow-elevated border-2">
             <div className="prose prose-invert max-w-none space-y-6">
               <section>
                 <h2 className="text-2xl font-bold mb-4">1. Acceptance of Terms</h2>

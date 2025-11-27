@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Star, Users, BookOpen, GraduationCap, Award, Globe, Sparkles, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 import instructors from "@/data/instructors.json";
 import instructor1 from "@/assets/instructor-1.jpg";
 import instructor2 from "@/assets/instructor-2.jpg";
@@ -221,22 +222,16 @@ const Instructors = () => {
             <p className="text-xl text-purple-100 mb-8">
               Join thousands of students learning from industry experts
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Badge className="bg-white/20 text-white px-6 py-3 text-lg cursor-pointer hover:bg-white/30 transition-colors">
-                  Browse All Courses
-                </Badge>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Badge variant="outline" className="border-white text-white px-6 py-3 text-lg cursor-pointer hover:bg-white hover:text-purple-600 transition-colors">
-                  Become an Instructor
-                </Badge>
+                <Link to="/courses">
+                  <Badge className="bg-white/20 text-white px-6 py-3 text-lg cursor-pointer hover:bg-white/30 transition-colors">
+                    Browse All Courses
+                  </Badge>
+                </Link>
               </motion.div>
             </div>
           </div>

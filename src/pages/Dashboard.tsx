@@ -18,16 +18,23 @@ import {
 import { getCurrentUser } from "@/lib/auth";
 import { getUserPurchases } from "@/lib/paymentGateway";
 import courses from "@/data/courses.json";
-import courseWebDev from "@/assets/course-web-dev.jpg";
-import courseDataScience from "@/assets/course-data-science.jpg";
-import courseMarketing from "@/assets/course-marketing.jpg";
-import courseDesign from "@/assets/course-design.jpg";
-
-const courseImages: Record<string, string> = {
-  "course-web-dev.jpg": courseWebDev,
-  "course-data-science.jpg": courseDataScience,
-  "course-marketing.jpg": courseMarketing,
-  "course-design.jpg": courseDesign,
+// Generate unique image for each course based on course ID
+const getCourseImage = (courseId: string, category: string) => {
+  const imageMap: Record<string, string> = {
+    "course-065": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=800&h=600&fit=crop&auto=format&q=80",
+    "test-it-course": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&auto=format&q=80",
+    "web-dev-bootcamp": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=600&fit=crop&auto=format&q=80",
+    "data-science-ai": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80"
+  };
+  
+  const categoryFallbacks: Record<string, string> = {
+    "Web Development": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&auto=format&q=80",
+    "Data Science": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80",
+    "Marketing": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format&q=80",
+    "Design": "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=600&fit=crop&auto=format&q=80"
+  };
+  
+  return imageMap[courseId] || categoryFallbacks[category] || "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&auto=format&q=80";
 };
 
 const Dashboard = () => {
@@ -137,7 +144,7 @@ const Dashboard = () => {
                     <Card className="overflow-hidden hover:shadow-elevated transition-all duration-300 border-2 hover:border-primary">
                       <div className="relative">
                         <img
-                          src={courseImages[course.image]}
+                          src={getCourseImage(course.id, course.category)}
                           alt={course.title}
                           className="w-full h-40 object-cover"
                         />
@@ -180,7 +187,7 @@ const Dashboard = () => {
                   <Link to={`/courses/${course.slug}`}>
                     <Card className="overflow-hidden hover:shadow-elevated transition-all duration-300 border-2 hover:border-primary group">
                       <img
-                        src={courseImages[course.image]}
+                        src={getCourseImage(course.id, course.category)}
                         alt={course.title}
                         className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
                       />
