@@ -38,7 +38,7 @@ export const Footer = () => {
               <span className="text-2xl font-bold text-gradient">QuickEdu</span>
             </Link>
             <p className="text-muted-foreground mb-4">
-              Empowering learners worldwide with high-quality online education.
+              At QuickEdu, where ambition meets achievement Hyderabad's emerging learning destination, shaping futures through quality training and career-focused guidance.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
@@ -107,7 +107,7 @@ export const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-1" />
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  PLOT NO. 39/C, H. NO. 301, SR TOWERS, HMT HILLS, ADDAGUTTA, KUKATPALLY, TIRUMALAGIRI, HYDERABAD, TELANGANA - 500072
+                  PLOT NO - 39/C, H. NO - 301, SR TOWERS, HMT HILLS, ADDAGUTTA, TIRUMALAGIRI, KUKATPALLY, Medchal - Malkajgiri, HYDERABAD, TELANGANA - 500072, INDIA
                 </p>
               </div>
             </div>

@@ -250,6 +250,31 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Company Quote Section */}
+      <section className="py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 via-purple-900 to-blue-900"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-white"
+            >
+              <div className="mb-8">
+                <div className="w-16 h-16 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center">
+                  <BookOpen className="w-8 h-8 text-white" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">QuickEdu</h2>
+              </div>
+              <blockquote className="text-lg md:text-xl leading-relaxed font-medium">
+                "QuickEdu - Transform Your Future with World-Class Online Education"
+              </blockquote>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Scrolling Courses Ticker */}
       <section className="py-12 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
